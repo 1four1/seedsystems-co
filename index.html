@@ -3,184 +3,1200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeedSystems™ — The Product Engine for Learning</title>
-  <meta name="description" content="SeedSystems™ builds AI-powered learning systems that outperform traditional education. We turn proven methodology into scalable digital products." />
+  <title>SeedSystems™ — AI Systems Architecture. Every Sector. Every Problem.</title>
+  <meta name="description" content="SeedSystems™ builds AI-powered operational systems across Education, Enterprise, Government, Health, and more. Evidenced-based methodology. 7-tier solution stack. Globally deployable." />
+  <meta name="keywords" content="AI systems, education technology, enterprise AI, study systems, A-Level revision, SeedSystems, institutional AI, operational intelligence, system architecture" />
+  <link rel="canonical" href="https://www.seedsystems.co/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.seedsystems.co/" />
+  <meta property="og:title" content="SeedSystems™ — AI Systems Architecture. Every Sector. Every Problem." />
+  <meta property="og:description" content="One Engine. Every Sector. Every Problem. SeedSystems™ turns first-principles methodology into deployable AI systems — from free tools to fully managed operations." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SeedSystems™" />
+  <meta name="twitter:description" content="One Engine. Every Sector. Every Problem." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
-    :root { --ink:#0B1426; --gold:#C8A96E; --paper:#FAFAF8; --warm:#F4F0E8; --rule:#D4CFC6; --mid:#6B7280; --ink2:#111827; --gold-dim:rgba(200,169,110,0.15); --gold-border:rgba(200,169,110,0.3); }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--ink);color:var(--paper);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(11,20,38,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,207,198,0.1)}
-    .nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;letter-spacing:0.02em;color:var(--gold);text-decoration:none}
-    .nav-logo span{color:var(--paper);font-style:italic}
-    .nav-links{display:flex;gap:32px;list-style:none}
-    .nav-links a{color:var(--mid);font-size:14px;font-weight:500;text-decoration:none;letter-spacing:0.02em;transition:color 0.2s}
-    .nav-links a:hover{color:var(--gold)}
-    .nav-cta{background:var(--gold);color:var(--ink);font-size:13px;font-weight:600;letter-spacing:0.04em;padding:9px 20px;border-radius:4px;text-decoration:none;text-transform:uppercase;transition:opacity 0.2s}
-    section{width:100%}
-    .container{max-width:1100px;margin:0 auto;padding:0 40px}
-    #hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;background:radial-gradient(ellipse 60% 50% at 80% 40%,rgba(200,169,110,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 10% 80%,rgba(200,169,110,0.05) 0%,transparent 60%),var(--ink)}
-    .hero-inner{max-width:820px;padding:100px 40px}
-    .hero-tag{display:inline-block;border:1px solid var(--gold-border);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:36px}
-    .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,72px);font-weight:600;line-height:1.1;color:var(--paper);margin-bottom:28px}
-    .hero-h1 em{font-style:italic;color:var(--gold)}
-    .hero-sub{font-size:19px;font-weight:300;color:rgba(250,250,248,0.72);line-height:1.65;max-width:620px;margin-bottom:52px}
-    .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
-    .btn-primary{background:var(--gold);color:var(--ink);font-size:14px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:16px 32px;border-radius:4px;text-decoration:none;transition:opacity 0.2s,transform 0.15s;display:inline-block}
-    .btn-ghost{background:transparent;border:1px solid rgba(250,250,248,0.25);color:rgba(250,250,248,0.8);font-size:14px;font-weight:500;letter-spacing:0.04em;padding:16px 32px;border-radius:4px;text-decoration:none;transition:border-color 0.2s,color 0.2s;display:inline-block}
-    .hero-metric-row{display:flex;gap:48px;flex-wrap:wrap;margin-top:72px;padding-top:40px;border-top:1px solid rgba(212,207,198,0.12)}
-    .hero-metric-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1}
-    .hero-metric-label{font-size:13px;font-weight:400;color:var(--mid);margin-top:6px;letter-spacing:0.02em}
-    #problem{padding:120px 0;background:linear-gradient(180deg,var(--ink) 0%,#0d1830 100%)}
-    .section-label{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-    .section-h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:600;line-height:1.2;color:var(--paper);margin-bottom:28px}
-    .section-h2 em{font-style:italic;color:var(--gold)}
-    .section-body{font-size:17px;line-height:1.75;color:rgba(250,250,248,0.7);max-width:620px}
-    .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
-    .problem-card{background:rgba(255,255,255,0.03);border:1px solid rgba(212,207,198,0.1);border-radius:8px;padding:32px}
-    .problem-card h3{font-size:16px;font-weight:600;color:var(--paper);margin-bottom:10px}
-    .problem-card p{font-size:14px;line-height:1.65;color:var(--mid)}
-    #engine{padding:120px 0;background:#0d1830}
-    .engine-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-    .engine-steps{margin-top:48px}
-    .engine-step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid rgba(212,207,198,0.08)}
-    .step-num{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;font-style:italic;color:var(--gold);opacity:0.6;min-width:28px;padding-top:2px}
-    .step-content h4{font-size:15px;font-weight:600;color:var(--paper);margin-bottom:4px}
-    .step-content p{font-size:13px;color:var(--mid);line-height:1.55}
-    .engine-right{position:sticky;top:100px}
-    .engine-proof-card{background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:10px;padding:36px}
-    .proof-tag{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-    .proof-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--paper);margin-bottom:12px;line-height:1.3}
-    .proof-desc{font-size:14px;line-height:1.65;color:rgba(250,250,248,0.65);margin-bottom:24px}
-    .proof-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
-    .proof-stat-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--gold);line-height:1}
-    .proof-stat-label{font-size:12px;color:var(--mid);margin-top:4px}
-    .proof-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:0.04em;transition:gap 0.2s}
-    .proof-link::after{content:'→'}
-    #who{padding:120px 0;background:linear-gradient(180deg,#0d1830 0%,var(--ink) 100%)}
-    .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
-    .who-card{background:rgba(255,255,255,0.025);border:1px solid rgba(212,207,198,0.1);border-radius:8px;padding:32px;transition:border-color 0.2s,background 0.2s}
-    .who-card-tier{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-    .who-card h3{font-size:18px;font-weight:600;color:var(--paper);margin-bottom:10px;line-height:1.3}
-    .who-card p{font-size:14px;line-height:1.65;color:var(--mid);margin-bottom:20px}
-    .who-card-price{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold)}
-    .who-card-price span{font-family:'Inter',sans-serif;font-size:13px;font-weight:400;color:var(--mid)}
-    #contact{padding:120px 0;background:var(--ink)}
-    .cta-inner{max-width:700px;text-align:center;margin:0 auto}
-    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .contact-detail{margin-top:40px;font-size:14px;color:var(--mid);text-align:center}
-    .contact-detail a{color:var(--gold);text-decoration:none}
-    footer{padding:40px;border-top:1px solid rgba(212,207,198,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-    .footer-logo{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold);letter-spacing:0.02em}
-    .footer-logo span{color:rgba(250,250,248,0.4);font-style:italic}
-    .footer-legal{font-size:12px;color:rgba(107,114,128,0.7);letter-spacing:0.02em}
-    .gold-rule{width:48px;height:2px;background:var(--gold);margin-bottom:24px}
-    @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.hero-inner{padding:80px 20px}.container{padding:0 20px}.problem-grid{grid-template-columns:1fr}.engine-layout{grid-template-columns:1fr;gap:48px}.engine-right{position:static}.who-grid{grid-template-columns:1fr}.hero-metric-row{gap:32px}footer{padding:32px 20px;flex-direction:column;text-align:center}}
+    :root {
+      --ink:        #0B1426;
+      --ink2:       #0d1830;
+      --gold:       #C8A96E;
+      --paper:      #FAFAF8;
+      --warm:       #F4F0E8;
+      --rule:       #D4CFC6;
+      --mid:        #6B7280;
+      --gold-dim:   rgba(200,169,110,0.10);
+      --gold-dim2:  rgba(200,169,110,0.15);
+      --gold-border:rgba(200,169,110,0.25);
+      --white-5:    rgba(255,255,255,0.05);
+      --white-3:    rgba(255,255,255,0.03);
+      --rule-10:    rgba(212,207,198,0.10);
+      --rule-08:    rgba(212,207,198,0.08);
+      --paper-70:   rgba(250,250,248,0.70);
+      --paper-50:   rgba(250,250,248,0.50);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--paper);
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(11,20,38,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule-10);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 600; letter-spacing: 0.02em;
+      color: var(--gold); text-decoration: none; white-space: nowrap;
+    }
+    .nav-logo span { color: var(--paper); font-style: italic; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: var(--mid); font-size: 13px; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.025em; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--ink);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+      padding: 9px 20px; border-radius: 3px; text-decoration: none;
+      text-transform: uppercase; transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ─── LAYOUT ─── */
+    section { width: 100%; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+    }
+    .section-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.8vw, 46px); font-weight: 600; line-height: 1.18;
+      color: var(--paper); margin-bottom: 22px;
+    }
+    .section-h2 em { font-style: italic; color: var(--gold); }
+    .section-body {
+      font-size: 17px; line-height: 1.75; color: var(--paper-70); max-width: 600px;
+    }
+    .gold-rule { width: 48px; height: 2px; background: var(--gold); margin-bottom: 20px; }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center; padding-top: 64px;
+      background:
+        radial-gradient(ellipse 70% 55% at 85% 35%, rgba(200,169,110,0.09) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 75%, rgba(200,169,110,0.05) 0%, transparent 65%),
+        var(--ink);
+    }
+    .hero-inner { max-width: 860px; padding: 100px 48px; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      border: 1px solid var(--gold-border); color: var(--gold);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 2px;
+      margin-bottom: 40px;
+    }
+    .hero-tag::before { content: '◆'; font-size: 8px; }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 6.5vw, 78px); font-weight: 600; line-height: 1.08;
+      color: var(--paper); margin-bottom: 28px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 19px; font-weight: 300; color: rgba(250,250,248,0.68);
+      line-height: 1.7; max-width: 640px; margin-bottom: 52px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--ink);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 15px 30px; border-radius: 3px;
+      text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; border: 1px solid rgba(250,250,248,0.2);
+      color: rgba(250,250,248,0.75); font-size: 13px; font-weight: 500;
+      letter-spacing: 0.04em; padding: 15px 30px; border-radius: 3px;
+      text-decoration: none; transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-metrics {
+      display: flex; gap: 52px; flex-wrap: wrap;
+      margin-top: 72px; padding-top: 40px;
+      border-top: 1px solid rgba(212,207,198,0.1);
+    }
+    .metric-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 600; color: var(--gold); line-height: 1;
+    }
+    .metric-label {
+      font-size: 12px; font-weight: 400; color: var(--mid);
+      margin-top: 6px; letter-spacing: 0.02em; line-height: 1.4;
+    }
+
+    /* ─── THESIS ─── */
+    #thesis {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--ink) 0%, var(--ink2) 100%);
+      border-top: 1px solid var(--rule-08);
+    }
+    .thesis-inner {
+      max-width: 800px; margin: 0 auto; text-align: center; padding: 0 48px;
+    }
+    .thesis-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.5vw, 28px); font-weight: 400; font-style: italic;
+      line-height: 1.55; color: var(--paper-70);
+      margin-bottom: 36px;
+    }
+    .thesis-quote strong { font-style: normal; color: var(--paper); font-weight: 600; }
+    .thesis-byline {
+      font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+    }
+
+    /* ─── SECTORS ─── */
+    #sectors {
+      padding: 120px 0;
+      background: var(--ink2);
+    }
+    .sectors-intro { margin-bottom: 64px; }
+    .sectors-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--rule-08);
+      border: 1px solid var(--rule-08); border-radius: 10px; overflow: hidden;
+    }
+    .sector-card {
+      background: var(--ink2); padding: 36px 32px;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .sector-card:hover { background: rgba(13,24,48,0.95); }
+    .sector-card.featured {
+      background: var(--gold-dim);
+      border-bottom: 2px solid var(--gold-border);
+    }
+    .sector-card.featured:hover { background: var(--gold-dim2); }
+    .sector-badge {
+      display: inline-block; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px;
+      border-radius: 2px; margin-bottom: 14px;
+    }
+    .badge-live { background: rgba(200,169,110,0.2); color: var(--gold); border: 1px solid var(--gold-border); }
+    .badge-dev  { background: rgba(107,114,128,0.15); color: var(--mid); border: 1px solid rgba(107,114,128,0.2); }
+    .sector-icon { font-size: 22px; margin-bottom: 12px; }
+    .sector-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 600; color: var(--paper);
+      margin-bottom: 8px; line-height: 1.2;
+    }
+    .sector-desc {
+      font-size: 13px; line-height: 1.6; color: var(--mid);
+      margin-bottom: 20px;
+    }
+    .sector-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .sector-tag {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.02em;
+      padding: 3px 9px; border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,207,198,0.12);
+      color: rgba(250,250,248,0.55);
+    }
+    .sector-products { margin-top: 16px; }
+    .sector-product-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 0;
+      border-top: 1px solid var(--rule-08);
+      font-size: 12px;
+    }
+    .sector-product-name { color: rgba(250,250,248,0.75); font-weight: 500; }
+    .product-status {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      padding: 2px 7px; border-radius: 2px;
+    }
+    .status-live { color: #4ade80; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); }
+    .status-soon { color: var(--mid); background: rgba(107,114,128,0.1); border: 1px solid rgba(107,114,128,0.2); }
+    .sector-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-decoration: none; letter-spacing: 0.03em;
+      margin-top: 16px; transition: gap 0.2s;
+    }
+    .sector-link:hover { gap: 10px; }
+    .sector-link::after { content: '→'; }
+
+    /* ─── ENGINE ─── */
+    #engine {
+      padding: 120px 0;
+      background: linear-gradient(180deg, var(--ink2) 0%, var(--ink) 100%);
+    }
+    .engine-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .engine-steps { margin-top: 48px; }
+    .engine-step {
+      display: flex; gap: 20px; padding: 18px 0;
+      border-bottom: 1px solid var(--rule-08);
+    }
+    .engine-step:last-child { border-bottom: none; }
+    .step-num {
+      font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 400;
+      font-style: italic; color: var(--gold); opacity: 0.65; min-width: 28px; padding-top: 2px;
+    }
+    .step-content h4 { font-size: 14px; font-weight: 600; color: var(--paper); margin-bottom: 3px; }
+    .step-content p { font-size: 12px; color: var(--mid); line-height: 1.55; }
+    .engine-right { position: sticky; top: 100px; }
+    .proof-card {
+      background: var(--gold-dim2); border: 1px solid var(--gold-border);
+      border-radius: 10px; padding: 36px;
+    }
+    .proof-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .proof-title {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600;
+      color: var(--paper); margin-bottom: 10px; line-height: 1.3;
+    }
+    .proof-desc { font-size: 13px; line-height: 1.65; color: var(--paper-50); margin-bottom: 24px; }
+    .proof-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+    .proof-stat-num {
+      font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600;
+      color: var(--gold); line-height: 1;
+    }
+    .proof-stat-label { font-size: 11px; color: var(--mid); margin-top: 3px; }
+    .proof-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--gold);
+      text-decoration: none; letter-spacing: 0.04em; transition: gap 0.2s;
+    }
+    .proof-link:hover { gap: 12px; }
+    .proof-link::after { content: '→'; }
+
+    /* ─── TIERS ─── */
+    #tiers {
+      padding: 120px 0;
+      background: var(--ink);
+    }
+    .tiers-intro { max-width: 620px; margin-bottom: 60px; }
+    .tiers-table-wrap { overflow-x: auto; }
+    .tiers-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid var(--rule-10); border-radius: 8px; overflow: hidden;
+    }
+    .tiers-table th {
+      background: rgba(200,169,110,0.08); text-align: left;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      padding: 14px 20px; border-bottom: 1px solid var(--rule-10);
+    }
+    .tiers-table td {
+      padding: 16px 20px; font-size: 13px; color: var(--paper-70);
+      border-bottom: 1px solid var(--rule-08); vertical-align: top;
+    }
+    .tiers-table tr:last-child td { border-bottom: none; }
+    .tiers-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tier-num {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600;
+      color: var(--gold); line-height: 1; display: block; margin-bottom: 2px;
+    }
+    .tier-name { font-size: 13px; font-weight: 600; color: var(--paper); }
+    .tier-price { font-weight: 600; color: var(--paper); font-size: 13px; }
+    .tier-human { font-size: 12px; color: var(--mid); }
+    .tier-highlight td { background: var(--gold-dim) !important; }
+    .tier-note {
+      margin-top: 20px; padding: 18px 24px;
+      background: rgba(255,255,255,0.02); border: 1px solid var(--rule-10);
+      border-radius: 6px; font-size: 13px; color: var(--mid); line-height: 1.65;
+    }
+    .tier-note strong { color: var(--gold); }
+
+    /* ─── AI FOR GOOD ─── */
+    #ethics {
+      padding: 120px 0;
+      background: linear-gradient(180deg, var(--ink) 0%, var(--ink2) 100%);
+    }
+    .ethics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    .ethics-card {
+      background: var(--white-3); border: 1px solid var(--rule-10);
+      border-radius: 8px; padding: 32px;
+    }
+    .ethics-num {
+      font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600;
+      color: var(--gold); opacity: 0.4; line-height: 1; margin-bottom: 12px;
+    }
+    .ethics-card h3 { font-size: 15px; font-weight: 600; color: var(--paper); margin-bottom: 8px; }
+    .ethics-card p { font-size: 13px; line-height: 1.65; color: var(--mid); }
+    .ethics-statement {
+      margin-top: 48px; padding: 32px 36px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      border-radius: 8px;
+    }
+    .ethics-statement p {
+      font-size: 14px; line-height: 1.75; color: var(--paper-70);
+    }
+    .ethics-statement strong { color: var(--gold); }
+
+    /* ─── WHO / TIERS ─── */
+    #who {
+      padding: 120px 0;
+      background: var(--ink2);
+    }
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .who-card {
+      background: var(--white-3); border: 1px solid var(--rule-10);
+      border-radius: 8px; padding: 32px; transition: border-color 0.2s, background 0.2s;
+    }
+    .who-card:hover { border-color: var(--gold-border); background: var(--gold-dim); }
+    .who-tier {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .who-card h3 { font-size: 17px; font-weight: 600; color: var(--paper); margin-bottom: 10px; line-height: 1.3; }
+    .who-card p { font-size: 13px; line-height: 1.65; color: var(--mid); margin-bottom: 20px; }
+    .who-price {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: var(--gold);
+    }
+    .who-price span { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; color: var(--mid); }
+
+    /* ─── PARTNER ─── */
+    #partner {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--ink2) 0%, var(--ink) 100%);
+    }
+    .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .partner-card {
+      background: var(--white-3); border: 1px solid var(--rule-10);
+      border-radius: 8px; padding: 32px;
+    }
+    .partner-card h3 { font-size: 15px; font-weight: 600; color: var(--paper); margin-bottom: 8px; }
+    .partner-card p { font-size: 13px; line-height: 1.65; color: var(--mid); margin-bottom: 16px; }
+    .partner-card a { color: var(--gold); font-size: 13px; font-weight: 600; text-decoration: none; }
+    .partner-card a:hover { text-decoration: underline; }
+
+    /* ─── CTA ─── */
+    #contact {
+      padding: 120px 0;
+      background: var(--ink);
+    }
+    .cta-inner { max-width: 700px; text-align: center; margin: 0 auto; }
+    .cta-inner .section-label { text-align: center; }
+    .cta-inner .section-h2 { text-align: center; }
+    .cta-inner .section-body { text-align: center; max-width: 100%; margin: 0 auto 44px; }
+    .gold-rule.center { margin: 0 auto 20px; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .contact-sub { margin-top: 36px; font-size: 13px; color: var(--mid); text-align: center; }
+    .contact-sub a { color: var(--gold); text-decoration: none; }
+    .contact-sub a:hover { text-decoration: underline; }
+
+    /* ─── LEGAL SECTIONS ─── */
+    #legal {
+      padding: 80px 0;
+      background: var(--ink);
+      border-top: 1px solid var(--rule-08);
+    }
+    .legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .legal-block h3 {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .legal-block p, .legal-block ul {
+      font-size: 12px; line-height: 1.8; color: var(--mid);
+    }
+    .legal-block ul { padding-left: 16px; }
+    .legal-block ul li { margin-bottom: 4px; }
+    .legal-block a { color: rgba(200,169,110,0.7); text-decoration: none; }
+    .legal-block a:hover { color: var(--gold); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 40px 48px; background: var(--ink);
+      border-top: 1px solid var(--rule-08);
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-left {}
+    .footer-logo {
+      font-family: 'Playfair Display', serif; font-size: 16px;
+      color: var(--gold); letter-spacing: 0.02em;
+    }
+    .footer-logo span { color: rgba(250,250,248,0.35); font-style: italic; }
+    .footer-tagline { font-size: 11px; color: rgba(107,114,128,0.6); margin-top: 4px; letter-spacing: 0.03em; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 11px; color: rgba(107,114,128,0.7); text-decoration: none;
+      letter-spacing: 0.03em; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-legal { font-size: 11px; color: rgba(107,114,128,0.5); letter-spacing: 0.02em; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero-inner, .container { padding-left: 20px; padding-right: 20px; }
+      .sectors-grid { grid-template-columns: 1fr; }
+      .engine-layout { grid-template-columns: 1fr; gap: 48px; }
+      .engine-right { position: static; }
+      .ethics-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .legal-grid { grid-template-columns: 1fr; }
+      .hero-metrics { gap: 32px; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 1100px) {
+      .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
+
+<!-- ══════════════════════════════════
+     NAV
+══════════════════════════════════ -->
 <nav>
-  <a href="#" class="nav-logo">SeedSystems<span>™</span></a>
-  <ul class="nav-links">
+  <a href="#" class="nav-logo" aria-label="SeedSystems Home">SeedSystems<span>™</span></a>
+  <ul class="nav-links" role="navigation" aria-label="Main navigation">
+    <li><a href="#sectors">Sectors</a></li>
     <li><a href="#engine">The Engine</a></li>
-    <li><a href="#who">Who It's For</a></li>
+    <li><a href="#tiers">Tiers</a></li>
+    <li><a href="#ethics">AI For Good</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Partner With Us</a>
 </nav>
-<section id="hero">
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
   <div class="hero-inner">
-    <div class="hero-tag">Product Engine &amp; IP Library</div>
-    <h1 class="hero-h1">We build AI systems<br/>that make learning<br/><em>work.</em></h1>
-    <p class="hero-sub">SeedSystems™ is a systematic product engine that turns proven educational methodology into scalable digital learning systems — for students, institutions, and the organisations that serve them.</p>
+    <div class="hero-tag">Systems Architecture · AI-Powered · Evidenced-Based</div>
+    <h1 class="hero-h1">
+      One Engine.<br/>
+      Every Sector.<br/>
+      <em>Every Problem.</em>
+    </h1>
+    <p class="hero-sub">
+      SeedSystems™ is a systems architecture firm that identifies broken workflows across every sector and deploys a proven, 7-tier solution stack — from a free guide all the way to a fully managed operating model.
+    </p>
     <div class="hero-actions">
-      <a href="#engine" class="btn-primary">See How It Works</a>
+      <a href="#sectors" class="btn-primary">Explore Sectors</a>
       <a href="#contact" class="btn-ghost">Partner With Us</a>
     </div>
-    <div class="hero-metric-row">
-      <div class="hero-metric"><div class="hero-metric-num">50×</div><div class="hero-metric-label">Faster feedback loop<br/>than traditional tutoring</div></div>
-      <div class="hero-metric"><div class="hero-metric-num">94%</div><div class="hero-metric-label">Cheaper than<br/>private tuition</div></div>
-      <div class="hero-metric"><div class="hero-metric-num">10</div><div class="hero-metric-label">Stage engine from<br/>concept to live product</div></div>
+    <div class="hero-metrics">
+      <div>
+        <div class="metric-num">9</div>
+        <div class="metric-label">Target sectors<br/>in active development</div>
+      </div>
+      <div>
+        <div class="metric-num">7</div>
+        <div class="metric-label">Tiers per system —<br/>from free to fully managed</div>
+      </div>
+      <div>
+        <div class="metric-num">10</div>
+        <div class="metric-label">Stage engine from<br/>concept to live deployment</div>
+      </div>
+      <div>
+        <div class="metric-num">3×</div>
+        <div class="metric-label">Minimum speed gain<br/>vs legacy methods</div>
+      </div>
     </div>
   </div>
 </section>
-<section id="problem">
-  <div class="container">
-    <div class="section-label">The Problem</div><div class="gold-rule"></div>
-    <h2 class="section-h2">Most learning tools are built<br/>on <em>intuition.</em> Ours are built<br/>on first principles.</h2>
-    <p class="section-body">The education industry produces tools that feel sophisticated but underperform in practice. Students work harder, not smarter. Institutions buy software that doesn't change outcomes. The methodology was always the missing layer.</p>
-    <div class="problem-grid">
-      <div class="problem-card"><h3>Ineffective Revision</h3><p>Most students use passive re-reading and highlighting — strategies shown to have near-zero retention impact. The techniques that work are rarely taught explicitly.</p></div>
-      <div class="problem-card"><h3>Examiner Blindness</h3><p>Students lose 1–2 grade boundaries not from knowledge gaps but from technique failure — not understanding how examiners apply mark schemes.</p></div>
-      <div class="problem-card"><h3>No System</h3><p>Scattered notes, YouTube videos, and paid tutors give conflicting advice with no coherent system beneath them. Students improvise instead of following a proven method.</p></div>
-      <div class="problem-card"><h3>No Scalable Solution</h3><p>Institutions that recognise this problem have no productised answer — only expensive one-to-one tutoring that can't scale across a student body.</p></div>
-    </div>
+
+<!-- ══════════════════════════════════
+     THESIS
+══════════════════════════════════ -->
+<section id="thesis" aria-label="Mission">
+  <div class="thesis-inner">
+    <p class="thesis-quote">
+      "We are not a digital products company. We are <strong>a systems architecture firm</strong> that uses AI to compress decades of consulting methodology into deployable, testable, sellable intelligence infrastructure."
+    </p>
+    <div class="thesis-byline">SeedSystems™ Operating Principle</div>
   </div>
 </section>
-<section id="engine">
+
+<!-- ══════════════════════════════════
+     SECTORS
+══════════════════════════════════ -->
+<section id="sectors" aria-label="Sectors">
   <div class="container">
-    <div class="section-label">Our Approach</div><div class="gold-rule"></div>
-    <h2 class="section-h2">A repeatable engine.<br/><em>Not a one-off project.</em></h2>
-    <p class="section-body">Every SeedSystems™ product is built through the same 10-stage methodology — from problem discovery through to automated agent deployment. Rigorous. Gate-controlled. Replicable across any learning vertical.</p>
-    <div class="engine-layout">
-      <div><div class="engine-steps">
-        <div class="engine-step"><div class="step-num">01</div><div class="step-content"><h4>Problem Discovery</h4><p>Validate the problem affects >10K learners with documented spend. No dominant AI solution present.</p></div></div>
-        <div class="engine-step"><div class="step-num">02</div><div class="step-content"><h4>First Principles</h4><p>Reconstruct the methodology from the ground up. Target ≥3× faster or ≥50% cheaper than the legacy approach.</p></div></div>
-        <div class="engine-step"><div class="step-num">03</div><div class="step-content"><h4>Prototype Build</h4><p>Full structured content build across all product tiers — every workflow covered before any packaging begins.</p></div></div>
-        <div class="engine-step"><div class="step-num">04</div><div class="step-content"><h4>Testing &amp; QA</h4><p>Tested across ≥3 subjects and ≥2 curriculum variants. Gate: all workflows validated end to end.</p></div></div>
-        <div class="engine-step"><div class="step-num">05</div><div class="step-content"><h4>Brand Development</h4><p>Name, handles, domain, brand guidelines, voice — all secured before packaging. Each product gets its own identity.</p></div></div>
-        <div class="engine-step"><div class="step-num">06–10</div><div class="step-content"><h4>Ethics → Packaging → GTM → Feedback → Agents</h4><p>Ethical clearance, full-tier digital packaging, launch stack, feedback loop, and finally: 7-agent automated deployment for ongoing operations.</p></div></div>
-      </div></div>
-      <div class="engine-right">
-        <div class="engine-proof-card">
-          <div class="proof-tag">Live Product — Education Vertical</div>
-          <div class="proof-title">The A-Level Grade Gap System</div>
-          <p class="proof-desc">Built through all 10 engine stages. Targets UK A-Level students losing grades to technique failure rather than knowledge gaps. Deployed across 7 product tiers from a free guide to a hosted SaaS platform.</p>
-          <div class="proof-stats">
-            <div class="proof-stat"><div class="proof-stat-num">7</div><div class="proof-stat-label">Product tiers</div></div>
-            <div class="proof-stat"><div class="proof-stat-num">50×</div><div class="proof-stat-label">Vs. tutoring cost</div></div>
-            <div class="proof-stat"><div class="proof-stat-num">£0→£97</div><div class="proof-stat-label">Entry → full system</div></div>
-            <div class="proof-stat"><div class="proof-stat-num">UK+</div><div class="proof-stat-label">Primary market</div></div>
+    <div class="sectors-intro">
+      <div class="section-label">The Sectors</div>
+      <div class="gold-rule"></div>
+      <h2 class="section-h2">
+        Every sector has<br/>
+        <em>broken workflows.</em><br/>
+        We rebuild them.
+      </h2>
+      <p class="section-body">
+        The SeedSystems™ engine can be pointed at any sector. Each vertical receives the same rigorous first-principles methodology — stripped of legacy assumptions, rebuilt for AI. Every problem gets the same 7-tier solution stack.
+      </p>
+    </div>
+
+    <div class="sectors-grid" role="list">
+
+      <!-- EDUCATION — FEATURED / LIVE -->
+      <div class="sector-card featured" role="listitem">
+        <span class="sector-badge badge-live">Live · Active</span>
+        <div class="sector-icon" aria-hidden="true">◎</div>
+        <div class="sector-name">Education</div>
+        <p class="sector-desc">Schools, students, teachers, and institutions are operating on methods designed before AI existed. We rebuild every learning workflow from first principles.</p>
+        <div class="sector-tags" aria-label="Education sub-categories">
+          <span class="sector-tag">Schools</span>
+          <span class="sector-tag">Teachers</span>
+          <span class="sector-tag">Students</span>
+          <span class="sector-tag">Universities</span>
+          <span class="sector-tag">A-Levels</span>
+          <span class="sector-tag">Curriculum</span>
+          <span class="sector-tag">EdTech</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">A-Level Grade Gap System</span>
+            <span class="product-status status-live">Live</span>
           </div>
-          <a href="https://mystudysystem.ai" class="proof-link" target="_blank">View StudySystems</a>
+          <div class="sector-product-item">
+            <span class="sector-product-name">IB Study System</span>
+            <span class="product-status status-soon">Q2 2026</span>
+          </div>
+          <div class="sector-product-item">
+            <span class="sector-product-name">IGCSE System</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+          <div class="sector-product-item">
+            <span class="sector-product-name">AP Study System (US)</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+        </div>
+        <a href="https://mystudysystem.ai" class="sector-link" target="_blank" rel="noopener">View StudySystems</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">⬡</div>
+        <div class="sector-name">Enterprise</div>
+        <p class="sector-desc">Risk frameworks, compliance operations, and corporate transformation. Built for organisations that can't afford to run on intuition.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Risk Frameworks</span>
+          <span class="sector-tag">Compliance</span>
+          <span class="sector-tag">Operations</span>
+          <span class="sector-tag">Transformation</span>
+          <span class="sector-tag">Governance</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Enterprise Risk System</span>
+            <span class="product-status status-soon">Q2 2026</span>
+          </div>
+          <div class="sector-product-item">
+            <span class="sector-product-name">Compliance Intelligence Pack</span>
+            <span class="product-status status-soon">Q2 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOVERNMENT -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">⧗</div>
+        <div class="sector-name">Government</div>
+        <p class="sector-desc">Policy systems, public sector operations, and regulatory frameworks. AI-powered intelligence for institutions operating at national scale.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Policy Systems</span>
+          <span class="sector-tag">Public Sector</span>
+          <span class="sector-tag">Regulatory</span>
+          <span class="sector-tag">Curriculum</span>
+          <span class="sector-tag">National AI</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">National AI Literacy Framework</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEALTH -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">⊕</div>
+        <div class="sector-name">Health</div>
+        <p class="sector-desc">Hospital operations, clinical workflows, patient systems, and mental health. AI-powered systems that support care without replacing clinical judgement.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Hospital Ops</span>
+          <span class="sector-tag">Clinical Workflows</span>
+          <span class="sector-tag">Patient Systems</span>
+          <span class="sector-tag">Mental Health</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Hospital Risk Management System</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTREPRENEUR -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">◆</div>
+        <div class="sector-name">Entrepreneur</div>
+        <p class="sector-desc">Startup launch, business-in-a-box, funding strategy, and scaling operations. Everything a founder needs — without the $10K consultant.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Startup Launch</span>
+          <span class="sector-tag">Business Systems</span>
+          <span class="sector-tag">Funding</span>
+          <span class="sector-tag">Scaling</span>
+          <span class="sector-tag">Operations</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Business Launch System</span>
+            <span class="product-status status-soon">Q2 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKFORCE -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">⟐</div>
+        <div class="sector-name">Workforce</div>
+        <p class="sector-desc">Career acceleration, upskilling, recruitment, and HR transformation. AI systems that help people and organisations build capability at scale.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Career Systems</span>
+          <span class="sector-tag">Upskilling</span>
+          <span class="sector-tag">Recruitment</span>
+          <span class="sector-tag">HR Transformation</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Career Acceleration System</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREATOR -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">✦</div>
+        <div class="sector-name">Creator</div>
+        <p class="sector-desc">Content systems, brand building, monetisation strategy, and audience growth. The full creator operating model — systematised and AI-powered.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Content Systems</span>
+          <span class="sector-tag">Brand Building</span>
+          <span class="sector-tag">Monetisation</span>
+          <span class="sector-tag">Audience Growth</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Creator Operating System</span>
+            <span class="product-status status-soon">Q2 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAMILY -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">◉</div>
+        <div class="sector-name">Family</div>
+        <p class="sector-desc">Parenting systems, household operations, financial literacy, and child development. AI that strengthens families, not replaces them.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Parenting</span>
+          <span class="sector-tag">Household Ops</span>
+          <span class="sector-tag">Financial Literacy</span>
+          <span class="sector-tag">Child Development</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Family Operating System</span>
+            <span class="product-status status-soon">Q3 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROPERTY -->
+      <div class="sector-card" role="listitem">
+        <span class="sector-badge badge-dev">In Development</span>
+        <div class="sector-icon" aria-hidden="true">⬢</div>
+        <div class="sector-name">Property</div>
+        <p class="sector-desc">Real estate analysis, investment intelligence, agent tools, and property management systems. The data-driven operating model for property professionals.</p>
+        <div class="sector-tags">
+          <span class="sector-tag">Real Estate</span>
+          <span class="sector-tag">Investment Analysis</span>
+          <span class="sector-tag">Agent Tools</span>
+          <span class="sector-tag">Property Management</span>
+        </div>
+        <div class="sector-products">
+          <div class="sector-product-item">
+            <span class="sector-product-name">Property Intelligence System</span>
+            <span class="product-status status-soon">Q4 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /sectors-grid -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ENGINE
+══════════════════════════════════ -->
+<section id="engine" aria-label="The Engine">
+  <div class="container">
+    <div class="section-label">The Methodology</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-h2">A repeatable engine.<br/><em>Not a one-off project.</em></h2>
+    <p class="section-body">
+      Every SeedSystems™ product runs through the same 10-stage quality-gated methodology — from problem discovery through to autonomous agent deployment. No product ships without passing all six validation tests.
+    </p>
+    <div class="engine-layout">
+      <div>
+        <div class="engine-steps">
+          <div class="engine-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Problem Discovery</h4>
+              <p>Validate the problem affects &gt;10K people with documented spend and no dominant AI-native solution.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>First Principles Deconstruction</h4>
+              <p>Forget the legacy method. Rebuild the workflow from zero. Target ≥3× faster or ≥50% cheaper than the current best practice.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>Prototype Build</h4>
+              <p>Full Tier 4 system built as structured source. Tiers 1–3 extracted simultaneously. All workflows covered before packaging begins.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Testing &amp; QA</h4>
+              <p>Six mandatory tests: Accuracy, Usability, Ethics, Competitor Benchmark, Format Integrity, Value Test. Nothing ships without a clean pass.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>Brand Development</h4>
+              <p>Name, domain, brand guidelines, voice — all secured before packaging. Each product gets its own distinct identity.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h4>Ethics &amp; Guardrails</h4>
+              <p>Non-negotiable. Education products force learning, not shortcuts. Health products never diagnose. Financial products always disclaim.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h4>Packaging &amp; Export</h4>
+              <p>Every system ships in at least three formats: DOCX, PDF, HTML dashboard. Every tier packaged to maximise perceived value.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h4>Go-To-Market Deployment</h4>
+              <p>Marketplace listings, email sequences, launch social content, SEO metadata — all generated and reviewed before publish.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">09</div>
+            <div class="step-content">
+              <h4>Feedback Loop</h4>
+              <p>Every review, question, and sales signal feeds back into Stage 1. The engine learns. Products iterate. Quality compounds.</p>
+            </div>
+          </div>
+          <div class="engine-step">
+            <div class="step-num">10</div>
+            <div class="step-content">
+              <h4>Agent Deployment</h4>
+              <p>7 autonomous agents activated: Marketing, Content, Product Monitor, Lead Generation, Platform Manager, Pricing Intelligence, Testimonial Harvester.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="engine-right">
+        <div class="proof-card">
+          <div class="proof-tag">Live System — Education · A-Level Vertical</div>
+          <div class="proof-title">The A-Level Grade Gap System</div>
+          <p class="proof-desc">
+            The first product built through all 10 engine stages. Targets UK A-Level students losing grade boundaries to technique failure — not knowledge gaps. Deployed across all 7 product tiers.
+          </p>
+          <div class="proof-stats">
+            <div>
+              <div class="proof-stat-num">7</div>
+              <div class="proof-stat-label">Product tiers</div>
+            </div>
+            <div>
+              <div class="proof-stat-num">50×</div>
+              <div class="proof-stat-label">Vs. private tutoring cost</div>
+            </div>
+            <div>
+              <div class="proof-stat-num">£0→£97</div>
+              <div class="proof-stat-label">Free guide to full system</div>
+            </div>
+            <div>
+              <div class="proof-stat-num">UK+</div>
+              <div class="proof-stat-label">International expansion</div>
+            </div>
+          </div>
+          <a href="https://mystudysystem.ai" class="proof-link" target="_blank" rel="noopener">View on StudySystems</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="who">
+
+<!-- ══════════════════════════════════
+     7-TIER ARCHITECTURE
+══════════════════════════════════ -->
+<section id="tiers" aria-label="7-Tier Architecture">
   <div class="container">
-    <div class="section-label">Who It's For</div><div class="gold-rule"></div>
-    <h2 class="section-h2">Built for every<br/><em>level of ambition.</em></h2>
-    <p class="section-body">From a student who wants to own the system, to an institution that wants us to run it for them — SeedSystems™ products are structured to meet buyers where they are.</p>
-    <div class="who-grid">
-      <div class="who-card"><div class="who-card-tier">Self-Directed Learner · T1–T4</div><h3>Students &amp; Independent Learners</h3><p>Download the free guide, use the templates, or run the full system locally. Own your learning infrastructure.</p><div class="who-card-price">Free → £97 <span>one-time</span></div></div>
-      <div class="who-card"><div class="who-card-tier">Platform User · T5</div><h3>Consistent Achievers</h3><p>Access the hosted system online. AI-powered study agent included in the Pro tier — linked to Kimi K2.5 for intelligent feedback loops.</p><div class="who-card-price">£19–£49 <span>/month</span></div></div>
-      <div class="who-card"><div class="who-card-tier">Institutional Partner · T6–T7</div><h3>Sixth Forms, Tutoring Companies &amp; Universities</h3><p>Workshop delivery, managed deployment, and a white-labelled system operating at scale across your student body. Enquire for a pilot.</p><div class="who-card-price">£2K–£25K <span>/engagement</span></div></div>
+    <div class="tiers-intro">
+      <div class="section-label">The 7-Tier Architecture</div>
+      <div class="gold-rule"></div>
+      <h2 class="section-h2">Seven depths.<br/><em>One system.</em></h2>
+      <p class="section-body">
+        The 7 tiers are not 7 separate products. They are 7 depths of the same solution — each tier feeding the next. A free guide qualifies a buyer for a template pack. A template pack leads to the full system. The full system opens the door to enterprise training. The same IP, built once, generates revenue across seven levels of engagement with progressively higher margins.
+      </p>
+    </div>
+    <div class="tiers-table-wrap">
+      <table class="tiers-table" aria-label="7-Tier Product Architecture">
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Product Type</th>
+            <th>What It Contains</th>
+            <th>Price Range</th>
+            <th>AI / Human</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tier-num">1</span><span class="tier-name">Prompts &amp; Guides</span></td>
+            <td>Lead magnets, micro-frameworks, tactical starter guides</td>
+            <td>Demonstrates system quality. Entry point for every buyer journey.</td>
+            <td class="tier-price">Free – $19</td>
+            <td class="tier-human">100% AI-generated</td>
+          </tr>
+          <tr>
+            <td><span class="tier-num">2</span><span class="tier-name">Templates</span></td>
+            <td>DOCX, HTML, XLSX, PDF, Notion templates</td>
+            <td>The collateral layer. Structured tools for immediate implementation.</td>
+            <td class="tier-price">$9 – $49</td>
+            <td class="tier-human">5% review</td>
+          </tr>
+          <tr>
+            <td><span class="tier-num">3</span><span class="tier-name">Workflows &amp; SOPs</span></td>
+            <td>Step-by-step guides, process maps, decision trees</td>
+            <td>Sequenced processes showing exactly how to use Tiers 1+2 in practice.</td>
+            <td class="tier-price">$19 – $79</td>
+            <td class="tier-human">10% QA</td>
+          </tr>
+          <tr class="tier-highlight">
+            <td><span class="tier-num">4</span><span class="tier-name">The System</span></td>
+            <td>Complete SeedSystem — all tiers bundled</td>
+            <td>The full intelligence system for a specific problem. Complete and standalone.</td>
+            <td class="tier-price">$79 – $297</td>
+            <td class="tier-human">15% Architect</td>
+          </tr>
+          <tr>
+            <td><span class="tier-num">5</span><span class="tier-name">Tech Stack + SaaS</span></td>
+            <td>Hosted platform, AI agents, automation layer</td>
+            <td>System + proposed tech stack: AI integrations, dashboards, API connections, automation.</td>
+            <td class="tier-price">$297 – $2,000 · or /mo</td>
+            <td class="tier-human">20% config + test</td>
+          </tr>
+          <tr>
+            <td><span class="tier-num">6</span><span class="tier-name">Setup &amp; Training</span></td>
+            <td>Live implementation workshops, workforce training</td>
+            <td>The Architect steps in. Setup, training, CPD-certified delivery. Premium consulting rates.</td>
+            <td class="tier-price">$2K – $25K</td>
+            <td class="tier-human">60% human-led</td>
+          </tr>
+          <tr>
+            <td><span class="tier-num">7</span><span class="tier-name">Managed Operations</span></td>
+            <td>Embedded team, ongoing management contract</td>
+            <td>Full operating model. Team runs the system for the client. Recurring, high-margin revenue.</td>
+            <td class="tier-price">$5K – $100K/mo</td>
+            <td class="tier-human">80% team-led</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tier-note">
+      <strong>The critical insight:</strong> Tiers 1–4 are the marketing engine for Tiers 5–7. Every $29 product sold is a lead qualification event for a $25,000 training contract. The same intellectual property, built once, generates revenue across all seven tiers — with progressively less competition and higher margins at each level.
     </div>
   </div>
 </section>
-<section id="contact">
+
+<!-- ══════════════════════════════════
+     WHO IT'S FOR
+══════════════════════════════════ -->
+<section id="who" aria-label="Who It's For">
+  <div class="container">
+    <div class="section-label">Who It's For</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-h2">Built for every<br/><em>level of ambition.</em></h2>
+    <p class="section-body">
+      From an individual who wants to own the system, to an institution that wants us to run it — SeedSystems™ products meet every buyer where they are.
+    </p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-tier">Individual · Tiers 1–4</div>
+        <h3>Self-Directed Learners &amp; Practitioners</h3>
+        <p>Download the free guide, use the templates, or run the full system yourself. Own your methodology. Work at your own pace.</p>
+        <div class="who-price">Free → $297 <span>one-time</span></div>
+      </div>
+      <div class="who-card">
+        <div class="who-tier">Platform User · Tier 5</div>
+        <h3>Teams &amp; Regular Users</h3>
+        <p>Access the hosted system. AI-powered features, automation, and intelligent dashboards — without managing any infrastructure.</p>
+        <div class="who-price">$19–$49 <span>/month</span></div>
+      </div>
+      <div class="who-card">
+        <div class="who-tier">Institutional Partner · Tiers 6–7</div>
+        <h3>Organisations &amp; Institutions</h3>
+        <p>Workshop delivery, managed deployment, and a white-labelled system operating at scale across your team. Enquire for a pilot.</p>
+        <div class="who-price">$2K–$100K <span>/engagement or month</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     AI FOR GOOD
+══════════════════════════════════ -->
+<section id="ethics" aria-label="AI For Good">
+  <div class="container">
+    <div class="section-label">AI For Good</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-h2">Amplify human capability.<br/><em>Never replace it.</em></h2>
+    <p class="section-body">
+      In a market flooded with low-quality AI outputs, SeedSystems™ is built on a different principle: AI should make people better at what they do, not shortcut the doing. This is not a compliance checkbox. It is our brand identity and our competitive moat.
+    </p>
+    <div class="ethics-grid">
+      <div class="ethics-card">
+        <div class="ethics-num">01</div>
+        <h3>Amplify, Never Replace</h3>
+        <p>AI augments human capability. Every system we build makes people better at their jobs, not redundant. If a product could eliminate the need for a human to think, we redesign it.</p>
+      </div>
+      <div class="ethics-card">
+        <div class="ethics-num">02</div>
+        <h3>Transparency Always</h3>
+        <p>Every product discloses how AI was used in its creation. Every prompt includes guidance on verifying AI outputs. We never present AI-generated content as human-authored.</p>
+      </div>
+      <div class="ethics-card">
+        <div class="ethics-num">03</div>
+        <h3>Access Equalisation</h3>
+        <p>AI should not widen the gap between those who can afford consultants and those who cannot. Our 7-tier pricing ensures essential tools are accessible to individuals while premium services serve enterprises.</p>
+      </div>
+      <div class="ethics-card">
+        <div class="ethics-num">04</div>
+        <h3>Bias Awareness</h3>
+        <p>Every prompt and system is tested for bias across gender, race, culture, and socioeconomic factors. Bias-checking instructions are embedded in every system that generates content about people.</p>
+      </div>
+      <div class="ethics-card">
+        <div class="ethics-num">05</div>
+        <h3>Responsible Commercialisation</h3>
+        <p>We do not sell systems in domains where AI could cause harm without expert human oversight. Medical, legal, and financial systems are always scaffolded — never definitive, never diagnostic.</p>
+      </div>
+      <div class="ethics-card">
+        <div class="ethics-num">06</div>
+        <h3>Education: The Learning Guardrail</h3>
+        <p>Education products never generate complete answers. They generate scaffolds that force the student to think. Assessment tools evaluate understanding — not output. Anti-plagiarism design is built in by default.</p>
+      </div>
+    </div>
+    <div class="ethics-statement">
+      <p>
+        <strong>AI Usage Statement:</strong> SeedSystems™ products are developed using AI-assisted methodology, human expert review, and a rigorous 6-test quality framework before any product is made available. AI is used as a force multiplier — all outputs are reviewed, validated, and signed off by the Architect before deployment. By using any SeedSystems™ product, you agree to use AI responsibly, verify outputs against primary sources where decisions carry real-world consequence, and apply human judgement at all critical decision points.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PARTNER & AFFILIATE
+══════════════════════════════════ -->
+<section id="partner" aria-label="Partner and Affiliate">
+  <div class="container">
+    <div class="section-label">Work With Us</div>
+    <div class="gold-rule"></div>
+    <h2 class="section-h2">Partner, build,<br/><em>or grow together.</em></h2>
+    <p class="section-body">
+      Whether you're a creator with an audience, an institution exploring AI adoption, or an operator who wants to co-build on our engine — there is a place for you in the SeedSystems™ ecosystem.
+    </p>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <h3>Institutional Partnerships</h3>
+        <p>Schools, universities, corporate training departments, and government bodies. We offer white-label deployment, co-development agreements, and fully managed operations for Tier 6–7 engagements.</p>
+        <a href="mailto:partnerships@seedsystems.co">Enquire about a partnership →</a>
+      </div>
+      <div class="partner-card">
+        <h3>Affiliate Programme</h3>
+        <p>Earn 30% commission on every sale you refer. Available for educators, content creators, and professionals who want to recommend systems that genuinely work. Simple link. No minimum. Monthly payout.</p>
+        <a href="mailto:affiliates@seedsystems.co">Apply to the affiliate programme →</a>
+      </div>
+      <div class="partner-card">
+        <h3>Regional Licensing</h3>
+        <p>We are actively seeking regional partners to build and distribute SeedSystems™ products in Arabic, Spanish, French, and Hindi markets. Licensing fee plus revenue share. Engine, methodology, and brand included.</p>
+        <a href="mailto:licensing@seedsystems.co">Enquire about licensing →</a>
+      </div>
+      <div class="partner-card">
+        <h3>Community</h3>
+        <p>Join a network of practitioners, educators, and operators using SeedSystems™ products in the field. Share wins, request product features, and get early access to new sector launches.</p>
+        <a href="mailto:hello@seedsystems.co">Join the community →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA / CONTACT
+══════════════════════════════════ -->
+<section id="contact" aria-label="Contact">
   <div class="container">
     <div class="cta-inner">
       <div class="section-label">Partner With SeedSystems™</div>
-      <div class="gold-rule" style="margin:0 auto 24px;"></div>
-      <h2 class="section-h2">Ready to deploy a<br/><em>learning system that works?</em></h2>
-      <p class="section-body" style="text-align:center;max-width:100%;margin:0 auto 48px;">Whether you're an institution exploring a pilot, an operator looking to co-build on the engine, or an educator who wants to run the system at scale — we want to hear from you.</p>
+      <div class="gold-rule center"></div>
+      <h2 class="section-h2">
+        Ready to deploy a<br/>
+        <em>system that works?</em>
+      </h2>
+      <p class="section-body">
+        Whether you're an institution exploring a pilot, an operator looking to co-build on the engine, an educator who wants to run the system at scale, or an individual ready to own the methodology — we want to hear from you.
+      </p>
       <div class="cta-actions">
         <a href="mailto:hello@seedsystems.co" class="btn-primary">Get in Touch</a>
-        <a href="https://mystudysystem.ai" class="btn-ghost" target="_blank">See a Live Product</a>
+        <a href="https://mystudysystem.ai" class="btn-ghost" target="_blank" rel="noopener">See a Live Product</a>
       </div>
-      <div class="contact-detail">Or email us directly: <a href="mailto:hello@seedsystems.co">hello@seedsystems.co</a></div>
+      <div class="contact-sub">
+        Email: <a href="mailto:hello@seedsystems.co">hello@seedsystems.co</a> &nbsp;·&nbsp;
+        Partnerships: <a href="mailto:partnerships@seedsystems.co">partnerships@seedsystems.co</a>
+      </div>
     </div>
   </div>
 </section>
-<footer>
-  <div class="footer-logo">SeedSystems<span>™</span></div>
-  <div class="footer-legal">© 2026 SeedSystems™ · All rights reserved · www.seedsystems.co</div>
+
+<!-- ══════════════════════════════════
+     LEGAL
+══════════════════════════════════ -->
+<section id="legal" aria-label="Legal Information">
+  <div class="container">
+    <div class="section-label">Legal &amp; Compliance</div>
+    <div class="gold-rule"></div>
+    <div class="legal-grid">
+
+      <div class="legal-block">
+        <h3>Terms of Use</h3>
+        <p>By accessing or purchasing any SeedSystems™ product, you agree to the following terms:</p>
+        <ul>
+          <li>Products are provided for personal or institutional use only. Redistribution or resale without written permission is prohibited.</li>
+          <li>All intellectual property — including system architecture, methodology, prompts, templates, and source files — remains the exclusive property of SeedSystems™.</li>
+          <li>Products may be used as a methodology tool. They do not constitute professional legal, financial, medical, or clinical advice.</li>
+          <li>We reserve the right to update, improve, or discontinue products at any time. Current purchasers retain access to their purchased version.</li>
+          <li>Refund requests may be submitted within 14 days of purchase if the product materially fails to function as described.</li>
+          <li>These terms are governed by the laws of England and Wales. Disputes shall be resolved through binding arbitration before resorting to litigation.</li>
+        </ul>
+      </div>
+
+      <div class="legal-block">
+        <h3>Privacy Policy</h3>
+        <p>SeedSystems™ is committed to protecting your data. Summary of our practices:</p>
+        <ul>
+          <li>We collect only the data necessary to deliver products and communicate with customers (name, email address, purchase history).</li>
+          <li>We do not sell, rent, or share personal data with third parties for marketing purposes.</li>
+          <li>Payment processing is handled by third-party providers (Stripe/Gumroad). We do not store card details.</li>
+          <li>Email addresses are used to deliver products and, where consent is given, to notify of new releases. You may unsubscribe at any time.</li>
+          <li>We comply with applicable data protection regulations including UK GDPR.</li>
+          <li>To request data deletion or access a copy of your data, contact: <a href="mailto:privacy@seedsystems.co">privacy@seedsystems.co</a></li>
+        </ul>
+      </div>
+
+      <div class="legal-block">
+        <h3>Disclaimer</h3>
+        <p>Important limitations on SeedSystems™ products:</p>
+        <ul>
+          <li><strong>Education products</strong> are study methodology tools. They do not guarantee examination results. Always follow official examination board guidance.</li>
+          <li><strong>Enterprise and compliance products</strong> are frameworks and guides. They do not constitute legal or regulatory advice. Consult qualified professionals for decisions with legal consequence.</li>
+          <li><strong>Health and wellness products</strong> are operational and informational. They are not medical devices, clinical tools, or substitutes for professional medical advice.</li>
+          <li><strong>Financial products</strong> are educational frameworks only. Nothing constitutes investment, tax, or financial advice. Consult a qualified financial adviser.</li>
+          <li>AI-generated content may contain errors or inaccuracies. All outputs should be reviewed by a qualified professional before implementation in high-stakes contexts.</li>
+        </ul>
+      </div>
+
+      <div class="legal-block">
+        <h3>Intellectual Property</h3>
+        <p>SeedSystems™ system architecture and methodology:</p>
+        <ul>
+          <li>The SeedSystems™ name, brand, and all associated marks are proprietary. Unauthorised use is prohibited.</li>
+          <li>All product source files, prompt libraries, workflow designs, and systems architecture are protected by copyright.</li>
+          <li>The 10-Stage Product Development Engine and 7-Tier Architecture are proprietary methodologies. Reproduction without licence is an infringement.</li>
+          <li>Purchasers of products receive a personal, non-transferable licence to use the content within their own practice or institution.</li>
+          <li>For licensing enquiries: <a href="mailto:licensing@seedsystems.co">licensing@seedsystems.co</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">SeedSystems<span>™</span></div>
+      <div class="footer-tagline">Find the Problem. Build the System. Test it. Deploy it. Scale it.</div>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#sectors">Sectors</a>
+      <a href="#engine">The Engine</a>
+      <a href="#tiers">7 Tiers</a>
+      <a href="#ethics">AI For Good</a>
+      <a href="#partner">Partner</a>
+      <a href="#legal">Terms &amp; Privacy</a>
+      <a href="mailto:hello@seedsystems.co">Contact</a>
+      <a href="https://mystudysystem.ai" target="_blank" rel="noopener">StudySystems</a>
+    </nav>
+    <div class="footer-legal">© 2026 SeedSystems™ · All rights reserved · www.seedsystems.co</div>
+  </div>
 </footer>
+
 </body>
 </html>

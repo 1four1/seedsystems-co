@@ -1,0 +1,154 @@
+---
+import CTABlock from './CTABlock.astro';
+
+interface Props {
+  sector: string;
+  headline: string;
+  headlineEm: string;
+  sub: string;
+  status: 'building' | 'pipeline';
+  eta?: string;
+  notify?: string;
+  parentPath: string;
+}
+
+const { sector, headline, headlineEm, sub, status, eta, parentPath } = Astro.props;
+
+const statusLabel = status === 'building' ? 'In Build' : 'Pipeline';
+const statusDesc  = status === 'building'
+  ? 'This sector is currently being built through the 7-tier architecture.'
+  : 'This sector is identified and validated. Build begins after the current queue.';
+---
+
+<div>
+  <!-- ── PAGE HERO ── -->
+  <section class="stub-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">SeedSystems™</a>
+        <span class="crumb-sep">→</span>
+        <span>{sector}</span>
+      </div>
+      <div class="stub-tag-row">
+        <span class="tag tag-canvas">{statusLabel}</span>
+        <span class="stub-eta">{eta ?? 'Coming soon'}</span>
+      </div>
+      <h1 class="stub-h1">
+        {headline}<br />
+        <em>{headlineEm}</em>
+      </h1>
+      <p class="stub-sub">{sub}</p>
+      <a href="/#sectors" class="btn-ghost">← Back to all sectors</a>
+    </div>
+  </section>
+
+  <!-- ── STATUS ── -->
+  <section class="stub-status">
+    <div class="container">
+      <div class="status-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">Build Status</p>
+        <h2 class="section-h2">What's happening<br /><em>right now.</em></h2>
+        <p class="status-desc">{statusDesc}</p>
+        <div class="status-steps">
+          <div class:list={['step', 'step-done']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Problem Scan</span>
+          </div>
+          <div class:list={['step', 'step-done']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Gap Validation</span>
+          </div>
+          <div class:list={['step', status === 'building' ? 'step-active' : 'step-pending']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Architecture</span>
+          </div>
+          <div class:list={['step', 'step-pending']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Build (T1→T4)</span>
+          </div>
+          <div class:list={['step', 'step-pending']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Ethics Clearance</span>
+          </div>
+          <div class:list={['step', 'step-pending']}>
+            <span class="step-dot"></span>
+            <span class="step-label">Beta & Launch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NOTIFY CTA ── -->
+  <CTABlock
+    eyebrow="Be first to know"
+    headline="Get notified when<br /><em>this sector launches.</em>"
+    subtext="Join the SeedSystems™ early access list. We notify sector-by-sector — no noise, no weekly newsletter."
+    primaryLabel="Join early access"
+    primaryHref="/contact/"
+    ghostLabel="See live systems"
+    ghostHref="/education/"
+  />
+</div>
+
+<style>
+  .stub-hero {
+    padding: 80px 0 80px;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--rule);
+  }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; color: var(--ink-light); letter-spacing: 0.04em;
+    margin-bottom: 32px; font-family: var(--sans);
+  }
+  .breadcrumb a { color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .crumb-sep { color: var(--rule); }
+  .stub-tag-row { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .stub-eta { font-size: 11px; font-weight: 300; color: var(--ink-light); font-family: var(--sans); }
+  .stub-h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 80px); font-weight: 300; line-height: 1.06;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .stub-h1 em { font-style: italic; color: var(--gold-dark); }
+  .stub-sub {
+    font-size: 17px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; max-width: 580px; margin-bottom: 40px;
+  }
+
+  /* Tags */
+  .tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; font-family: var(--sans); }
+  .tag-canvas { background: var(--canvas-2); color: var(--ink-mid); border: 1px solid var(--rule); }
+
+  /* ── STATUS ── */
+  .stub-status { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .status-inner { max-width: 700px; }
+  .status-desc { font-size: 16px; font-weight: 300; color: var(--ink-mid); line-height: 1.75; margin-bottom: 48px; }
+  .status-steps { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule);
+    font-size: 14px; font-weight: 300; color: var(--ink-light);
+  }
+  .step-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    background: var(--rule); border: 2px solid var(--rule);
+  }
+  .step-done .step-dot { background: var(--gold); border-color: var(--gold); }
+  .step-done { color: var(--ink); }
+  .step-active .step-dot { background: var(--white); border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-dim2); }
+  .step-active { color: var(--ink); font-weight: 400; }
+  .step-label { font-family: var(--sans); letter-spacing: 0.02em; }
+
+  /* Buttons */
+  .btn-ghost {
+    border: 1px solid var(--rule); color: var(--ink-mid);
+    font-size: 11px; font-weight: 400; letter-spacing: 0.06em;
+    padding: 12px 24px; text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+</style>

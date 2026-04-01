@@ -1,0 +1,89 @@
+---
+interface Props {
+  activePath?: string;
+}
+const { activePath = '' } = Astro.props;
+
+const links = [
+  { href: '/education/', label: 'Education' },
+  { href: '/enterprise/', label: 'Enterprise' },
+  { href: '/health/',     label: 'Health' },
+  { href: '/legal/',      label: 'Legal' },
+];
+---
+
+<nav>
+  <a href="/" class="nav-logo">
+    SeedSystems<span class="tm">™</span>
+  </a>
+  <ul class="nav-links">
+    {links.map(l => (
+      <li>
+        <a
+          href={l.href}
+          class:list={[{ active: activePath.startsWith(l.href) }]}
+        >
+          {l.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <a href="/contact/" class="nav-cta">Get in touch</a>
+  <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<style>
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 64px;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 300; letter-spacing: -0.01em;
+    color: var(--ink); text-decoration: none; white-space: nowrap;
+    display: flex; align-items: baseline; gap: 0.05em;
+  }
+  .nav-logo .tm {
+    font-family: var(--sans); font-size: 0.5rem;
+    color: var(--gold); align-self: flex-start; margin-top: 4px;
+  }
+  .nav-links {
+    display: flex; gap: 28px; list-style: none;
+  }
+  .nav-links a {
+    color: var(--ink-light); font-size: 13px; font-weight: 400;
+    text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--ink); }
+  .nav-cta {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    padding: 9px 20px; text-decoration: none;
+    text-transform: uppercase; transition: opacity 0.2s;
+    font-family: var(--sans);
+  }
+  .nav-cta:hover { opacity: 0.75; }
+
+  /* Mobile burger */
+  .nav-burger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-burger span {
+    display: block; width: 22px; height: 1.5px; background: var(--ink);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .nav-cta   { display: none; }
+    .nav-burger { display: flex; }
+  }
+</style>

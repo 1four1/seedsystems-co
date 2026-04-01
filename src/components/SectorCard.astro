@@ -1,0 +1,80 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  body: string;
+  href: string;
+  status: 'live' | 'building' | 'pipeline';
+  featured?: boolean;
+}
+
+const { label, title, body, href, status, featured = false } = Astro.props;
+
+const statusMap = {
+  live:     { text: 'Live',        cls: 'tag-gold'    },
+  building: { text: 'In Build',    cls: 'tag-canvas'  },
+  pipeline: { text: 'Pipeline',    cls: 'tag-outline' },
+};
+const badge = statusMap[status];
+---
+
+<a href={href} class:list={['sector-card', { featured }]}>
+  <div class="sector-header">
+    <span class="sector-badge tag {badge.cls}">{badge.text}</span>
+    <span class="sector-label">{label}</span>
+  </div>
+  <h3 class="sector-title">{title}</h3>
+  <p class="sector-body">{body}</p>
+  <span class="sector-link">Explore systems →</span>
+</a>
+
+<style>
+  .sector-card {
+    display: block;
+    background: var(--white); padding: 36px 32px;
+    transition: background 0.2s;
+    position: relative;
+    text-decoration: none; color: inherit;
+    cursor: pointer;
+  }
+  .sector-card:hover { background: var(--canvas-2); }
+  .sector-card.featured {
+    background: var(--canvas-2);
+    border-bottom: 2px solid var(--gold);
+  }
+  .sector-card.featured:hover { background: var(--canvas-2); }
+
+  .sector-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .sector-badge {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px;
+    font-family: var(--sans);
+  }
+  .tag-gold   { background: var(--gold); color: var(--ink); }
+  .tag-canvas { background: var(--canvas-2); color: var(--ink-mid); border: 1px solid var(--rule); }
+  .tag-outline { border: 1px solid var(--rule); color: var(--ink-light); }
+
+  .sector-label {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-light); font-family: var(--sans);
+  }
+  .sector-title {
+    font-family: var(--serif);
+    font-size: 22px; font-weight: 300; color: var(--ink);
+    margin-bottom: 12px; line-height: 1.25;
+  }
+  .sector-body {
+    font-size: 13px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.65; margin-bottom: 24px;
+  }
+  .sector-link {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans);
+    transition: letter-spacing 0.2s;
+  }
+  .sector-card:hover .sector-link { letter-spacing: 0.12em; }
+</style>

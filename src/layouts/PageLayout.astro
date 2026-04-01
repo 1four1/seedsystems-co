@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  activePath?: string;
+}
+
+const { activePath, ...rest } = Astro.props;
+---
+
+<BaseLayout {...rest}>
+  <Nav activePath={activePath} />
+  <main style="padding-top: 64px;">
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>

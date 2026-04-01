@@ -1,0 +1,94 @@
+---
+interface Props {
+  eyebrow?: string;
+  headline: string;
+  subtext?: string;
+  primaryLabel: string;
+  primaryHref: string;
+  ghostLabel?: string;
+  ghostHref?: string;
+  dark?: boolean;
+}
+
+const {
+  eyebrow,
+  headline,
+  subtext,
+  primaryLabel,
+  primaryHref,
+  ghostLabel,
+  ghostHref,
+  dark = false,
+} = Astro.props;
+---
+
+<section class:list={['cta-block', { dark }]}>
+  <div class="container-sm cta-inner">
+    {eyebrow && <p class="cta-eyebrow">{eyebrow}</p>}
+    <h2 class="cta-headline" set:html={headline} />
+    {subtext && <p class="cta-sub">{subtext}</p>}
+    <div class="cta-actions">
+      <a href={primaryHref} class="btn-primary">{primaryLabel}</a>
+      {ghostLabel && ghostHref && (
+        <a href={ghostHref} class:list={['btn-ghost', { 'btn-ghost-light': dark }]}>{ghostLabel}</a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-block {
+    padding: 100px 0;
+    background: var(--canvas);
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .cta-block.dark {
+    background: var(--ink);
+  }
+  .cta-inner { margin: 0 auto; }
+  .cta-eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold-dark); margin-bottom: 20px;
+    font-family: var(--sans);
+  }
+  .dark .cta-eyebrow { color: var(--gold); }
+  .cta-headline {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4.5vw, 60px); font-weight: 300; line-height: 1.1;
+    color: var(--ink); margin-bottom: 20px;
+  }
+  .dark .cta-headline { color: var(--canvas); }
+  .cta-headline :global(em) { font-style: italic; color: var(--gold-dark); }
+  .dark .cta-headline :global(em) { color: var(--gold); }
+  .cta-sub {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; margin-bottom: 40px; max-width: 520px; margin-inline: auto;
+  }
+  .dark .cta-sub { color: rgba(250, 250, 248, 0.55); }
+  .cta-actions {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .btn-primary {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s; font-family: var(--sans);
+  }
+  .dark .btn-primary { background: var(--gold); color: var(--ink); }
+  .btn-primary:hover { opacity: 0.75; }
+  .btn-ghost {
+    border: 1px solid var(--rule); color: var(--ink-mid);
+    font-size: 11px; font-weight: 400; letter-spacing: 0.06em;
+    padding: 14px 28px; text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+  .btn-ghost-light {
+    border-color: rgba(229, 221, 208, 0.3);
+    color: rgba(250, 250, 248, 0.6);
+  }
+  .btn-ghost-light:hover { border-color: var(--canvas); color: var(--canvas); }
+</style>

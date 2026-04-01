@@ -1,0 +1,24 @@
+/* ─── SeedSystems™ Brand Tokens ─── */
+:root {
+  /* Colour */
+  --ink:          #0B1426;
+  --ink-mid:      #2C3E50;
+  --ink-light:    #6B7C93;
+  --gold:         #C8A96E;
+  --gold-dark:    #A8893E;
+  --gold-dim:     rgba(200, 169, 110, 0.08);
+  --gold-dim2:    rgba(200, 169, 110, 0.14);
+  --gold-border:  rgba(200, 169, 110, 0.30);
+  --canvas:       #FAFAF8;
+  --canvas-2:     #F4F0E8;
+  --white:        #FFFFFF;
+  --rule:         #E5DDD0;
+
+  /* Type */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --container: 1120px;
+  --container-sm: 860px;
+}

@@ -1,17 +1,394 @@
 ---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectorCard from '../components/SectorCard.astro';
+import CTABlock from '../components/CTABlock.astro';
 
+const sectors = [
+  {
+    label: 'Education',
+    title: 'Education Systems',
+    body: 'From A-Level grade uplift to institutional learning design. Systems built for students, teachers, and EdTech operators.',
+    href: '/education/',
+    status: 'live' as const,
+    featured: true,
+  },
+  {
+    label: 'Enterprise',
+    title: 'Enterprise Operations',
+    body: 'AI-native workflows for scaling teams. Operations, intelligence, HR, and communications — systematised.',
+    href: '/enterprise/',
+    status: 'building' as const,
+    featured: false,
+  },
+  {
+    label: 'Health',
+    title: 'Health & Wellness',
+    body: 'Clinical workflow optimisation, patient communication systems, and practice management frameworks.',
+    href: '/health/',
+    status: 'pipeline' as const,
+    featured: false,
+  },
+  {
+    label: 'Legal',
+    title: 'Legal & Compliance',
+    body: 'Document automation, compliance tracking, and client communication systems for law firms and in-house teams.',
+    href: '/legal/',
+    status: 'pipeline' as const,
+    featured: false,
+  },
+  {
+    label: 'Finance',
+    title: 'Financial Services',
+    body: 'Planning, reporting, and client intelligence systems for advisors, accountants, and independent operators.',
+    href: '/finance/',
+    status: 'pipeline' as const,
+    featured: false,
+  },
+  {
+    label: 'Content & Media',
+    title: 'Content & Media',
+    body: 'From single insight to 30 days of platform-native content. The Content Engine and its sector variants.',
+    href: '/content/',
+    status: 'building' as const,
+    featured: false,
+  },
+];
+
+const tiers = [
+  { n: 'T1', label: 'Prompts & Guides',           desc: 'Lead magnets and trust builders — free to low-cost entry points.',        price: 'Free → £27' },
+  { n: 'T2', label: 'Templates & Collaterals',    desc: 'Done-for-you assets. Formatted, ready to use, sector-specific.',          price: '£47 – £197' },
+  { n: 'T3', label: 'Workflows & SOPs',           desc: 'Done-with-you systems. Step-by-step operational blueprints.',             price: '£297 – £997' },
+  { n: 'T4', label: 'Full Systems',               desc: 'Complete operating blueprints. Every module, every dependency mapped.',   price: '£2k – £10k' },
+  { n: 'T5', label: 'Tech Stack & Automation',    desc: 'The system running live — SaaS, automation, AI-native stack.',            price: '£10k – £50k' },
+  { n: 'T6', label: 'Setup & Training',           desc: 'You in the room. Implementation, onboarding, team training.',             price: 'Retainer' },
+  { n: 'T7', label: 'Operating Model',            desc: 'Team hired and running. Fully managed operations.',                       price: 'Retainer' },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout
+  title="SeedSystems™ — AI Systems Architecture. Every Sector. Every Problem."
+  description="SeedSystems™ builds AI-powered operational systems across Education, Enterprise, Government, Health, and more. Evidenced-based methodology. 7-tier solution stack. Globally deployable."
+>
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">AI Systems Architecture</div>
+      <h1 class="hero-h1">
+        One Engine.<br />
+        <em>Every Sector.</em><br />
+        Every Problem.
+      </h1>
+      <p class="hero-sub">
+        SeedSystems™ turns first-principles methodology into deployable AI systems —
+        from free tools to fully managed operations. Built once. Scaled everywhere.
+      </p>
+      <div class="hero-actions">
+        <a href="/education/" class="btn-primary">Explore Education Systems</a>
+        <a href="#methodology" class="btn-ghost">See the methodology</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-num">7</div>
+          <div class="metric-label">Tier solution stack<br />Free to fully managed</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">6+</div>
+          <div class="metric-label">Sectors in build<br />Education live now</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">9</div>
+          <div class="metric-label">Seed Systems<br />In development</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">Evidence-based<br />Ethics-cleared</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THESIS ── -->
+  <section id="thesis">
+    <div class="thesis-inner">
+      <blockquote class="thesis-quote">
+        "Most people who need a system don't build one —
+        they buy <strong>tools</strong> and hope.
+        SeedSystems™ builds the system for them,
+        deploys it across every tier, and makes it
+        <strong>impossible to fail</strong> at the first step."
+      </blockquote>
+      <p class="thesis-byline">The SeedSystems™ Founding Thesis</p>
+    </div>
+  </section>
+
+  <!-- ── SECTORS ── -->
+  <section id="sectors">
+    <div class="container">
+      <div class="sectors-intro">
+        <p class="section-label">Sectors</p>
+        <h2 class="section-h2">
+          The same engine.<br /><em>A different problem.</em>
+        </h2>
+        <p class="section-body">
+          Each SeedSystems™ sector starts with a first-principles problem scan,
+          builds through the 7-tier architecture, and deploys with full ethics
+          clearance. Education is live. Enterprise is in build. The pipeline expands quarterly.
+        </p>
+      </div>
+      <div class="sectors-grid">
+        {sectors.map(s => (
+          <SectorCard {...s} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── METHODOLOGY ── -->
+  <section id="methodology">
+    <div class="container">
+      <div class="method-split">
+        <div class="method-left">
+          <div class="gold-rule"></div>
+          <p class="section-label">Methodology</p>
+          <h2 class="section-h2">
+            The 7-Tier<br /><em>Product Architecture</em>
+          </h2>
+          <p class="section-body">
+            Every SeedSystems™ product is built on the same architecture —
+            from a free prompt guide (T1) to a fully managed operating model (T7).
+            Customers enter at any tier. The system pulls them forward.
+          </p>
+          <div class="method-engine">
+            <p class="method-engine-label">The Product Engine Loop</p>
+            <p class="method-engine-code">
+              PROBLEM SCAN → GAP VALIDATION → ARCHITECTURE<br />
+              → BUILD (T1→T5) → BETA → LAUNCH → SCALE → NEXT PROBLEM
+            </p>
+          </div>
+        </div>
+        <div class="method-right">
+          {tiers.map(t => (
+            <div class="tier-row">
+              <div class="tier-n">{t.n}</div>
+              <div class="tier-body">
+                <div class="tier-label">{t.label}</div>
+                <div class="tier-desc">{t.desc}</div>
+              </div>
+              <div class="tier-price">{t.price}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ETHICS ── -->
+  <section id="ethics">
+    <div class="container">
+      <div class="ethics-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">Ethics & Standards</p>
+        <h2 class="section-h2">
+          Every system is<br /><em>ethics-cleared before launch.</em>
+        </h2>
+        <p class="section-body">
+          No SeedSystems™ product ships without a 12-point AI Ethics Clearance.
+          Every sector has a defined promise statement. Every product has a list of
+          what it will not do. This isn't a footnote — it's a gate.
+        </p>
+        <div class="ethics-grid">
+          <div class="ethics-card">
+            <div class="ethics-num">12</div>
+            <div class="ethics-label">Ethics clearance questions<br />answered before every launch</div>
+          </div>
+          <div class="ethics-card">
+            <div class="ethics-num">100%</div>
+            <div class="ethics-label">Of products carry a defined<br />promise statement</div>
+          </div>
+          <div class="ethics-card">
+            <div class="ethics-num">0</div>
+            <div class="ethics-label">Products launched without<br />human gate review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <CTABlock
+    eyebrow="Start here"
+    headline="The A-Level Grade Gap System<br />is <em>live now.</em>"
+    subtext="The first SeedSystems™ Education product. Built for UK A-Level students. Ethics-cleared. 97% accuracy tested. Free entry tier available."
+    primaryLabel="Explore the system"
+    primaryHref="/education/a-level-grade-gap/"
+    ghostLabel="See all sectors"
+    ghostHref="#sectors"
+  />
+</PageLayout>
+
+<style>
+  /* ── HERO ── */
+  #hero {
+    min-height: calc(100vh - 64px);
+    display: flex; align-items: center;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-inner {
+    max-width: var(--container-sm); padding: 100px 48px;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1px solid var(--rule); color: var(--ink-light);
+    font-size: 11px; font-weight: 400; letter-spacing: 0.14em;
+    text-transform: uppercase; padding: 6px 14px;
+    margin-bottom: 40px; font-family: var(--sans);
+  }
+  .hero-tag::before { content: '◆'; font-size: 7px; color: var(--gold); }
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 7vw, 88px); font-weight: 300; line-height: 1.04;
+    color: var(--ink); margin-bottom: 28px;
+  }
+  .hero-h1 em { font-style: italic; color: var(--gold-dark); }
+  .hero-sub {
+    font-size: 18px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; max-width: 600px; margin-bottom: 52px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-metrics {
+    display: flex; gap: 52px; flex-wrap: wrap;
+    margin-top: 72px; padding-top: 40px;
+    border-top: 1px solid var(--rule);
+  }
+  .metric-num {
+    font-family: var(--serif);
+    font-size: 38px; font-weight: 300; color: var(--ink); line-height: 1;
+  }
+  .metric-label {
+    font-size: 12px; font-weight: 300; color: var(--ink-light);
+    margin-top: 6px; letter-spacing: 0.02em; line-height: 1.5;
+  }
+
+  /* ── THESIS ── */
+  #thesis {
+    padding: 100px 0;
+    background: var(--canvas-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .thesis-inner {
+    max-width: 800px; margin: 0 auto; text-align: center; padding: 0 48px;
+  }
+  .thesis-quote {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.5vw, 32px); font-weight: 300; font-style: italic;
+    line-height: 1.55; color: var(--ink-mid); margin-bottom: 36px;
+  }
+  .thesis-quote strong { font-style: normal; color: var(--ink); font-weight: 400; }
+  .thesis-byline {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark); font-family: var(--sans);
+  }
+
+  /* ── SECTORS ── */
+  #sectors { padding: 120px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .sectors-intro { margin-bottom: 64px; }
+  .sectors-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); overflow: hidden;
+  }
+
+  /* ── METHODOLOGY ── */
+  #methodology {
+    padding: 120px 0; background: var(--canvas);
+    border-bottom: 1px solid var(--rule);
+  }
+  .method-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+  .method-engine {
+    margin-top: 40px; padding: 24px;
+    background: var(--canvas-2); border: 1px solid var(--rule);
+  }
+  .method-engine-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px;
+    font-family: var(--sans);
+  }
+  .method-engine-code {
+    font-size: 11px; font-weight: 400; color: var(--ink-mid);
+    font-family: var(--sans); line-height: 1.8; letter-spacing: 0.02em;
+  }
+  .tier-row {
+    display: grid; grid-template-columns: 40px 1fr auto;
+    gap: 16px; align-items: start;
+    padding: 20px 0; border-bottom: 1px solid var(--rule);
+  }
+  .tier-row:first-child { border-top: 1px solid var(--rule); }
+  .tier-n {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); padding-top: 2px;
+  }
+  .tier-label {
+    font-size: 14px; font-weight: 400; color: var(--ink); margin-bottom: 4px;
+  }
+  .tier-desc {
+    font-size: 12px; font-weight: 300; color: var(--ink-light); line-height: 1.5;
+  }
+  .tier-price {
+    font-size: 12px; font-weight: 400; color: var(--ink-mid);
+    white-space: nowrap; text-align: right; font-family: var(--sans);
+  }
+
+  /* ── ETHICS ── */
+  #ethics {
+    padding: 120px 0; background: var(--canvas-2);
+    border-bottom: 1px solid var(--rule);
+  }
+  .ethics-inner { max-width: 800px; }
+  .ethics-grid {
+    display: flex; gap: 48px; margin-top: 56px; flex-wrap: wrap;
+  }
+  .ethics-num {
+    font-family: var(--serif);
+    font-size: 48px; font-weight: 300; color: var(--ink); line-height: 1;
+    margin-bottom: 10px;
+  }
+  .ethics-label {
+    font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6;
+  }
+
+  /* ── Buttons (local) ── */
+  .btn-primary {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s, transform 0.15s; font-family: var(--sans);
+  }
+  .btn-primary:hover { opacity: 0.75; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent; border: 1px solid var(--rule);
+    color: var(--ink-mid); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.06em; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+    .method-split { grid-template-columns: 1fr; gap: 48px; }
+  }
+  @media (max-width: 640px) {
+    .hero-inner { padding: 64px 24px; }
+    .sectors-grid { grid-template-columns: 1fr; }
+    .hero-metrics { gap: 32px; }
+    .thesis-inner { padding: 0 24px; }
+    .ethics-grid { flex-direction: column; gap: 32px; }
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+interface Props {
+  id: string;
+  tier: number;
+  title: string;
+  body: string;
+  price?: string;
+  href: string;
+  status: 'live' | 'building' | 'pipeline';
+  featured?: boolean;
+}
+
+const { id, tier, title, body, price, href, status, featured = false } = Astro.props;
+
+const statusMap = {
+  live:     { text: 'Live',     cls: 'tag-gold'    },
+  building: { text: 'In Build', cls: 'tag-canvas'  },
+  pipeline: { text: 'Pipeline', cls: 'tag-outline' },
+};
+const badge = statusMap[status];
+---
+
+<div class:list={['product-card', { featured }]}>
+  <div class="product-meta">
+    <span class="product-id">{id}</span>
+    <span class={`product-status tag ${badge.cls}`}>{badge.text}</span>
+  </div>
+  <div class="product-tier">Tier {tier}</div>
+  <h3 class="product-title">{title}</h3>
+  <p class="product-body">{body}</p>
+  {price && <div class="product-price">{price}</div>}
+  <a href={href} class:list={['product-cta', status === 'live' ? 'btn-primary' : 'btn-ghost']}>
+    {status === 'live' ? 'Get this system' : 'Learn more'}
+  </a>
+</div>
+
+<style>
+  .product-card {
+    border: 1px solid var(--rule); padding: 32px;
+    background: var(--white); transition: box-shadow 0.2s, border-color 0.2s;
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .product-card:hover { border-color: var(--gold-border); box-shadow: 0 4px 24px rgba(11,20,38,0.06); }
+  .product-card.featured {
+    border-color: var(--gold-border);
+    background: var(--gold-dim);
+  }
+
+  .product-meta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .product-id {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-light); font-family: var(--sans);
+  }
+  .product-status {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 3px 8px; font-family: var(--sans);
+  }
+  .tag-gold    { background: var(--gold); color: var(--ink); }
+  .tag-canvas  { background: var(--canvas-2); color: var(--ink-mid); border: 1px solid var(--rule); }
+  .tag-outline { border: 1px solid var(--rule); color: var(--ink-light); }
+
+  .product-tier {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;
+    font-family: var(--sans);
+  }
+  .product-title {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 300; color: var(--ink);
+    line-height: 1.25; margin-bottom: 12px;
+  }
+  .product-body {
+    font-size: 13px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.65; margin-bottom: 20px; flex: 1;
+  }
+  .product-price {
+    font-family: var(--serif);
+    font-size: 24px; font-weight: 300; color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .product-cta {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 12px 24px; text-decoration: none;
+    font-family: var(--sans); transition: opacity 0.2s;
+    align-self: flex-start;
+  }
+  .btn-primary { background: var(--ink); color: var(--canvas); }
+  .btn-primary:hover { opacity: 0.75; }
+  .btn-ghost { border: 1px solid var(--rule); color: var(--ink-mid); }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+</style>

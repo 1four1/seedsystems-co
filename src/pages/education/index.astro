@@ -5,7 +5,7 @@ import CTABlock from '../../components/CTABlock.astro';
 
 const products = [
   {
-    id: '1F1-EDU-001',
+    id: 'SS-EDU-001',
     tier: 4,
     title: 'The A-Level Grade Gap System',
     body: 'Close the gap between your current grade and your target grade. Subject-specific diagnostics, technique drills, and a 30-day revision protocol — built for Year 12 and 13 students across all A-Level subjects.',
@@ -15,44 +15,45 @@ const products = [
     featured: true,
   },
   {
-    id: '1F1-EDU-001-T5',
+    id: 'SS-EDU-002',
+    tier: 4,
+    title: 'The IB Study System — IB Decoded',
+    body: 'The complete architecture for navigating the IB Diploma. Subject strategy, IA mastery, EE + TOK system, and a 30-day revision protocol — built for Diploma students across every subject combination.',
+    price: '£97',
+    href: '/education/ib-decoded/',
+    status: 'live' as const,
+    featured: true,
+  },
+  {
+    id: 'SS-EDU-T5',
     tier: 5,
     title: 'StudySystems — The SaaS Platform',
-    body: 'The A-Level Grade Gap System running live at mystudysystem.ai. Progress saved automatically. Spaced repetition managed. Daily AI coach on Pro tier.',
+    body: 'Both study systems running live at mystudysystem.ai. Progress saved automatically. Spaced repetition managed. Daily AI coach on Pro tier.',
     price: '£19/mo — £49/mo',
     href: 'https://mystudysystem.ai',
     status: 'building' as const,
     featured: false,
   },
   {
-    id: '1F1-EDU-002',
+    id: 'SS-EDU-003',
     tier: 4,
-    title: 'The GCSE Foundation System',
-    body: 'The Grade Gap System adapted for GCSE. Subject-level diagnostics, command word mastery, and a structured 30-day protocol for Year 10 and 11 students.',
+    title: 'The IGCSE Study System',
+    body: 'Subject-level diagnostics, command word mastery, and a structured 30-day protocol for IGCSE students across Cambridge and Edexcel International specifications.',
     href: '/education/',
     status: 'pipeline' as const,
     featured: false,
   },
   {
-    id: '1F1-EDU-003',
+    id: 'SS-EDU-004',
     tier: 4,
-    title: 'The University Application System',
-    body: 'Personal statement architecture, subject-specific preparation, and interview readiness. For Year 13 students applying to Russell Group and competitive universities.',
+    title: 'The AP Study System',
+    body: 'The Grade Gap System adapted for Advanced Placement. Diagnostic, FRQ technique drills, and a structured protocol for US and international AP students.',
     href: '/education/',
     status: 'pipeline' as const,
     featured: false,
   },
   {
-    id: '1F1-EDU-004',
-    tier: 3,
-    title: 'The Teacher Intelligence Workflow',
-    body: 'Marking, planning, and parent communication systems for secondary teachers. Reduce admin by 60%. Run on any AI model.',
-    href: '/education/',
-    status: 'pipeline' as const,
-    featured: false,
-  },
-  {
-    id: '1F1-EDU-005',
+    id: 'SS-EDU-005',
     tier: 5,
     title: 'The EdTech Operator Stack',
     body: 'For education businesses, tutoring platforms, and EdTech operators. Content engine, student success workflows, and institutional deployment.',
@@ -90,15 +91,15 @@ const products = [
           </p>
           <div class="page-hero-meta">
             <div class="meta-item">
-              <span class="meta-num">1</span>
-              <span class="meta-label">Product live</span>
+              <span class="meta-num">2</span>
+              <span class="meta-label">Products live</span>
             </div>
             <div class="meta-item">
-              <span class="meta-num">5</span>
+              <span class="meta-num">4</span>
               <span class="meta-label">In pipeline</span>
             </div>
             <div class="meta-item">
-              <span class="meta-num">16–18</span>
+              <span class="meta-num">16–19</span>
               <span class="meta-label">Primary user age</span>
             </div>
           </div>
@@ -151,18 +152,18 @@ const products = [
       <div class="gold-rule"></div>
       <p class="section-label">Who It's For</p>
       <h2 class="section-h2">
-        Three students.<br /><em>One system.</em>
+        Three students.<br /><em>Two systems.</em>
       </h2>
       <div class="icp-grid">
         <div class="icp-card">
-          <div class="icp-name">Hana, Y13, London</div>
+          <div class="icp-name">Hana, Y13, London — A-Level</div>
           <div class="icp-desc">Predicted BBB, target AAB for medicine. Buys on TikTok recommendation. iPhone-first. Needs structure and daily progress.</div>
           <div class="icp-trigger">Upgrade trigger: friends say the AI coach gave instant essay feedback.</div>
         </div>
         <div class="icp-card">
-          <div class="icp-name">Tariq, Y12, Dubai</div>
-          <div class="icp-desc">Strong student, A* across three sciences. Parents invest in premium tools without hesitation. Needs depth on mark scheme logic.</div>
-          <div class="icp-trigger">Upgrade trigger: wants AI to set his daily study schedule.</div>
+          <div class="icp-name">Aisha, Y12, Dubai — IB Diploma</div>
+          <div class="icp-desc">IB Diploma, Chemistry and Maths HL. Parents invest in premium study tools. Needs a system for IA and EE — not another subject textbook.</div>
+          <div class="icp-trigger">Upgrade trigger: the IA Mastery Framework saves her weeks of iteration.</div>
         </div>
         <div class="icp-card">
           <div class="icp-name">Priya's daughter, Y12, Birmingham</div>

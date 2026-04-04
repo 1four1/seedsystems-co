@@ -6,22 +6,22 @@ const tiers = [
   {
     n: 'T1', label: 'Free Diagnostic Pack', price: 'Free',
     desc: 'The Subject Diagnostic prompt — understand exactly where you\'re losing marks in 20 minutes. No email required.',
-    cta: 'Download free', href: '#free', live: true,
+    cta: 'Download free', href: 'https://seedsystems.gumroad.com/l/freealelvelstudyguide', live: true,
   },
   {
     n: 'T2', label: 'Templates Bundle', price: '£29 (~$37)',
     desc: 'Revision planner template, mark scheme analysis sheet, and technique drill tracker.',
-    cta: 'Get templates', href: 'https://gumroad.com', live: true,
+    cta: 'Get templates', href: 'https://seedsystems.gumroad.com/l/alevel-t2-templates', live: true,
   },
   {
     n: 'T3', label: 'The Workflow System', price: '£49 (~$62)',
     desc: 'The complete session-by-session workflow. Run the full system across 30 days with zero ambiguity.',
-    cta: 'Get the workflow', href: 'https://gumroad.com', live: true,
+    cta: 'Get the workflow', href: 'https://seedsystems.gumroad.com/l/alevel-t3-workflows', live: true,
   },
   {
     n: 'T4', label: 'The Full System', price: '£97 (~$122)',
     desc: 'Every module. 6 core prompts. 30-day protocol. Spaced repetition engine. Full Paper Debrief. The complete blueprint.',
-    cta: 'Get the full system', href: 'https://gumroad.com', live: true,
+    cta: 'Get the full system', href: 'https://seedsystems.gumroad.com/l/ALevelgradegapsystem', live: true,
   },
   {
     n: 'T5', label: 'StudySystems SaaS', price: 'From £19/mo (~$24)',
@@ -104,7 +104,7 @@ const proofPoints = [
             and exam boards.
           </p>
           <div class="product-hero-actions">
-            <a href="https://gumroad.com" class="btn-primary">Get the full system — £97 (~$122)</a>
+            <a href="https://seedsystems.gumroad.com/l/ALevelgradegapsystem" class="btn-primary">Get the full system — £97 (~$122)</a>
             <a href="#free" class="btn-ghost">Download free diagnostic ↓</a>
           </div>
           <div class="product-proof-strip">
@@ -130,7 +130,7 @@ const proofPoints = [
             <div class="spec-row"><span>Ethics clearance</span><span>12/12 PASS</span></div>
             <div class="spec-row"><span>Version</span><span>v1.0</span></div>
             <div class="spec-divider"></div>
-            <a href="https://gumroad.com" class="spec-cta btn-primary">Get this system — £97 (~$122)</a>
+            <a href="https://seedsystems.gumroad.com/l/ALevelgradegapsystem" class="spec-cta btn-primary">Get this system — £97 (~$122)</a>
             <div class="spec-free">
               <a href="#free">Free T1 diagnostic available below →</a>
             </div>
@@ -270,10 +270,46 @@ const proofPoints = [
     headline="The full system.<br /><em>£97. One-time.</em>"
     subtext="6 core prompts, a 30-day protocol, spaced repetition engine, and full paper debrief. Works across all A-Level subjects. Every exam board."
     primaryLabel="Get the A-Level Grade Gap System — £97"
-    primaryHref="https://gumroad.com"
+    primaryHref="https://seedsystems.gumroad.com/l/ALevelgradegapsystem"
     ghostLabel="Download free T1 diagnostic"
-    ghostHref="#free"
+    ghostHref="https://seedsystems.gumroad.com/l/freealelvelstudyguide"
   />
+
+  <!-- ── AFFILIATE ── -->
+  <section class="affiliate-section">
+    <div class="container">
+      <div class="affiliate-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">Affiliate Programme</p>
+        <h2 class="section-h2">
+          Recommend the system.<br />
+          <em>Earn on every sale.</em>
+        </h2>
+        <p class="affiliate-body">
+          If you're a tutor, teacher, content creator, or student with an audience — the
+          SeedSystems™ affiliate programme lets you earn commission on every sale you refer.
+          No minimums. No lock-ins. Apply in under two minutes.
+        </p>
+        <div class="affiliate-points">
+          <div class="ap-item">
+            <span class="ap-icon">→</span>
+            <span>Competitive commission on every tier — T1 through T4</span>
+          </div>
+          <div class="ap-item">
+            <span class="ap-icon">→</span>
+            <span>Tracked via Gumroad — payouts direct to your account</span>
+          </div>
+          <div class="ap-item">
+            <span class="ap-icon">→</span>
+            <span>Works for tutors, revision YouTubers, student influencers, and schools</span>
+          </div>
+        </div>
+        <a href="https://seedsystems.gumroad.com/affiliates" class="btn-primary affiliate-cta" target="_blank" rel="noopener">
+          Apply to the affiliate programme →
+        </a>
+      </div>
+    </div>
+  </section>
 </PageLayout>
 
 <style>
@@ -420,6 +456,25 @@ const proofPoints = [
     transition: border-color 0.2s, color 0.2s;
   }
   .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* ── AFFILIATE ── */
+  .affiliate-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .affiliate-inner { max-width: 760px; }
+  .affiliate-body {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.8; margin-bottom: 40px;
+  }
+  .affiliate-points {
+    display: flex; flex-direction: column; gap: 16px;
+    margin-bottom: 40px; padding: 32px;
+    background: var(--canvas); border: 1px solid var(--rule);
+  }
+  .ap-item {
+    display: flex; gap: 14px; align-items: baseline;
+    font-size: 14px; font-weight: 300; color: var(--ink-mid); line-height: 1.6;
+  }
+  .ap-icon { color: var(--gold-dark); font-family: var(--sans); flex-shrink: 0; }
+  .affiliate-cta { display: inline-block; }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {

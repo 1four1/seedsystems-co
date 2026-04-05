@@ -1,0 +1,109 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  tagline: string;
+  body: string;
+  price: string;
+  href: string;
+  status: 'live' | 'building' | 'pipeline';
+  layers?: string;
+  prompts?: string;
+}
+
+const { id, title, tagline, body, price, href, status, layers, prompts } = Astro.props;
+
+const statusMap = {
+  live:     { text: 'Live',      cls: 'tag-gold'    },
+  building: { text: 'In Build',  cls: 'tag-canvas'  },
+  pipeline: { text: 'Pipeline',  cls: 'tag-outline' },
+};
+const badge = statusMap[status];
+---
+
+<a href={href} class:list={['sys-card', { 'sys-card--live': status === 'live' }]}>
+  <div class="sys-meta">
+    <span class="sys-id">{id}</span>
+    <span class={`sys-badge tag ${badge.cls}`}>{badge.text}</span>
+  </div>
+  <h3 class="sys-title">{title}</h3>
+  <p class="sys-tagline">{tagline}</p>
+  <p class="sys-body">{body}</p>
+  <div class="sys-footer">
+    <div class="sys-stats">
+      {layers && <span class="sys-stat">{layers}</span>}
+      {prompts && <span class="sys-stat">{prompts}</span>}
+    </div>
+    <div class="sys-price">{price}</div>
+  </div>
+  <span class="sys-cta">{status === 'live' ? 'Get this system →' : 'Coming soon →'}</span>
+</a>
+
+<style>
+  .sys-card {
+    display: flex; flex-direction: column;
+    background: var(--white); padding: 36px 32px;
+    border: 1px solid var(--rule);
+    text-decoration: none; color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .sys-card:hover {
+    border-color: var(--gold-border);
+    box-shadow: 0 4px 32px rgba(11,20,38,0.06);
+  }
+  .sys-card--live {
+    border-top: 2px solid var(--gold);
+  }
+
+  .sys-meta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .sys-id {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark); font-family: var(--sans);
+  }
+  .sys-badge {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 3px 8px; font-family: var(--sans);
+  }
+  .tag-gold    { background: var(--gold); color: var(--ink); }
+  .tag-canvas  { background: var(--canvas-2); color: var(--ink-mid); border: 1px solid var(--rule); }
+  .tag-outline { border: 1px solid var(--rule); color: var(--ink-light); }
+
+  .sys-title {
+    font-family: var(--serif);
+    font-size: 22px; font-weight: 300; color: var(--ink);
+    line-height: 1.2; margin-bottom: 8px;
+  }
+  .sys-tagline {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 16px;
+  }
+  .sys-body {
+    font-size: 13px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.65; flex: 1; margin-bottom: 24px;
+  }
+  .sys-footer {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 20px; padding-top: 20px; border-top: 1px solid var(--rule);
+  }
+  .sys-stats { display: flex; flex-direction: column; gap: 4px; }
+  .sys-stat {
+    font-size: 10px; font-weight: 400; color: var(--ink-light);
+    letter-spacing: 0.04em; font-family: var(--sans);
+  }
+  .sys-price {
+    font-family: var(--serif);
+    font-size: 26px; font-weight: 300; color: var(--ink);
+    line-height: 1;
+  }
+  .sys-cta {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); transition: letter-spacing 0.2s;
+  }
+  .sys-card:hover .sys-cta { letter-spacing: 0.12em; }
+</style>

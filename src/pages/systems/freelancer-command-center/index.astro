@@ -1,0 +1,428 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import CTABlock from '../../../components/CTABlock.astro';
+
+const layers = [
+  { n: '01', name: 'Client Management', desc: 'CRM for one: every client, relationship, and opportunity tracked and managed with AI.' },
+  { n: '02', name: 'Pipeline & Proposals', desc: 'AI-powered prospecting, outreach, and proposal writing that wins work.' },
+  { n: '03', name: 'Project Operations', desc: 'Kickoff, brief capture, milestone tracking, delivery confirmation, and client handover.' },
+  { n: '04', name: 'Financial Control', desc: 'Pricing, invoicing, rate negotiation, and financial tracking without the spreadsheet chaos.' },
+  { n: '05', name: 'Contracts & Legal', desc: 'Contract templates, scope management, and dispute prevention for every engagement.' },
+];
+
+const for_who = [
+  { role: 'Freelancers', need: 'In any service discipline who lose 30–40% of earning potential to operational chaos.' },
+  { role: 'Solo Consultants', need: 'Who need to manage 2–10 clients simultaneously without dropping the ball.' },
+  { role: 'Independent Contractors', need: 'Who want to look and operate like a proper firm from day one.' },
+  { role: 'Side-Hustle Operators', need: 'Transitioning to full-time independence who need real infrastructure.' },
+  { role: 'Creative Professionals', need: 'Designers, writers, strategists, developers who hate admin.' },
+  { role: 'New Freelancers', need: 'Who want to set up professionally from the first client.' },
+];
+---
+
+<PageLayout
+  title="Freelancer Command Center — SeedSystems™ Signature Systems"
+  description="Complete operating system for independent professionals. 5 modules. Stop running your business from your inbox. $29 one-time."
+  activePath="/systems/"
+>
+  <!-- ── HERO ── -->
+  <section class="sys-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">SeedSystems™</a>
+        <span class="sep">→</span>
+        <a href="/systems/">Signature Systems</a>
+        <span class="sep">→</span>
+        <span>Freelancer Command Center</span>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-tag">SS-09 · Freelance Series</span>
+          <h1 class="hero-h1">
+            Freelancer<br /><em>Command Center</em>
+          </h1>
+          <p class="hero-sub">
+            Stop running your business from your inbox. Complete operating system for independent
+            professionals. 5 modules covering every part of a freelance or solo business.
+          </p>
+          <div class="hero-actions">
+            <a href="https://seedsystems.gumroad.com/l/freelancer-command-center" class="btn-primary" target="_blank" rel="noopener">
+              Get this system — $29
+            </a>
+            <a href="https://seedsystems.gumroad.com/l/freelancer-free" class="btn-ghost" target="_blank" rel="noopener">
+              Try one prompt free
+            </a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hc-label">What you get</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 5 business modules</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 25+ master prompts</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Client management CRM</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Pipeline & proposals</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Project operations</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Financial & legal templates</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Works with free Claude AI</div>
+            <div class="hc-divider"></div>
+            <div class="hc-price">$29</div>
+            <div class="hc-price-sub">One-time · Interactive HTML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROBLEM ── -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">The Problem</p>
+        <h2 class="section-h2">
+          Freelancing breaks people. Not because<br /><em>the work is hard.</em><br />The chaos around it is.
+        </h2>
+        <p class="section-body">
+          You're juggling client emails, project details, financial tracking, and invoicing across a dozen
+          different tools and spreadsheets. You're losing clients because you forget to follow up. You're
+          underbidding because you don't have a pricing system. You're not getting paid on time because
+          you don't have contract discipline.
+        </p>
+        <p class="section-body">
+          The problem isn't that you can't do the work. It's that the business infrastructure around the work
+          is chaos. This system turns five fragmented tools into one integrated command center for client
+          management, pipeline, projects, finances, and legal compliance.
+        </p>
+        <blockquote class="sys-quote">
+          "Freelancing breaks people. Not because the work is hard — but because the business
+          around the work is chaos. <strong>This system ends that.</strong>"
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── ARCHITECTURE ── -->
+  <section class="arch-section">
+    <div class="container">
+      <p class="section-label">System Architecture</p>
+      <h2 class="section-h2">5 Modules. Complete Operations.</h2>
+      <div class="layers-grid">
+        {layers.map(l => (
+          <div class="layer-card">
+            <div class="layer-n">Module {l.n}</div>
+            <div class="layer-name">{l.name}</div>
+            <div class="layer-desc">{l.desc}</div>
+          </div>
+        ))}
+      </div>
+      <div class="flow-panel">
+        <div class="flow-label">Freelance flow — from opportunity to payment to repeat business</div>
+        <div class="flow-steps">
+          <div class="flow-node flow-dashed">Prospect inquiry or lead identified</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Module 1 — Client Management (qualify + track)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Module 2 — Pipeline & Proposals (win the work)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-gold">Modules 3, 4, 5 — Operations, financial control, legal protection</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-ink">Paid. Delivered. On time. Ready for the next client.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── WHO IT'S FOR ── -->
+  <section class="for-section">
+    <div class="container">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-h2">Built for anyone<br /><em>running a freelance business.</em></h2>
+      <div class="for-grid">
+        {for_who.map(f => (
+          <div class="for-card">
+            <div class="for-role">{f.role}</div>
+            <div class="for-need">{f.need}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROTOCOL ── -->
+  <section class="protocol-section">
+    <div class="container">
+      <div class="protocol-inner">
+        <p class="section-label">The Command Center Protocol</p>
+        <h2 class="section-h2">One system.<br /><em>Every part of the business.</em></h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-time">New Client (Modules 2 → 1 → 3)</div>
+            <div class="t-right">
+              <div class="t-title">Proposal → Client Onboarding → Kickoff</div>
+              <div class="t-desc">Win the work, get the contract signed, and kick off professionally.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Weekly (Monday)</div>
+            <div class="t-right">
+              <div class="t-title">Business Review</div>
+              <div class="t-desc">Active projects, pipeline health, outstanding invoices, incoming revenue.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Weekly (Friday)</div>
+            <div class="t-right">
+              <div class="t-title">Close the Week</div>
+              <div class="t-desc">Milestone logging, upcoming deliverables, financial update, client follow-ups.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">As Needed</div>
+            <div class="t-right">
+              <div class="t-title">Modules 04 & 05</div>
+              <div class="t-desc">Pricing conversations, contract situations, dispute prevention.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <CTABlock
+    eyebrow="Get started"
+    headline="$29. Operating<br /><em>like a firm.</em>"
+    subtext="Interactive HTML. Complete freelance operating system. Client management, pipeline, projects, finances, and contracts. Or try one prompt free."
+    primaryLabel="Get the full system — $29"
+    primaryHref="https://seedsystems.gumroad.com/l/freelancer-command-center"
+    ghostLabel="Try one prompt free"
+    ghostHref="https://seedsystems.gumroad.com/l/freelancer-free"
+  />
+
+  <!-- ── NEXT SYSTEM ── -->
+  <section class="next-section">
+    <div class="container">
+      <p class="section-label">Also in the Signature Series</p>
+      <div class="next-grid">
+        <a href="/systems/operations-in-a-box/" class="next-card">
+          <div class="next-id">SS-02</div>
+          <div class="next-title">Operations in a Box</div>
+          <div class="next-desc">Run your solo business like a firm.</div>
+        </a>
+        <a href="/systems/financial-planning/" class="next-card">
+          <div class="next-id">SS-06</div>
+          <div class="next-title">Financial Planning System</div>
+          <div class="next-desc">Know your numbers. Own your decisions.</div>
+        </a>
+        <a href="/systems/morning-intelligence/" class="next-card">
+          <div class="next-id">SS-01</div>
+          <div class="next-title">The Morning Intelligence System</div>
+          <div class="next-desc">10 master prompts. 5 intelligence layers. 15 minutes every morning.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .container { max-width: var(--container-sm); margin: 0 auto; padding: 0 48px; }
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+  .gold-rule { width: 48px; height: 2px; background: var(--gold); margin-bottom: 28px; }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; color: var(--ink-light); letter-spacing: 0.04em;
+    margin-bottom: 48px; font-family: var(--sans);
+  }
+  .breadcrumb a { color: var(--ink-light); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .sep { color: var(--rule); }
+
+  /* HERO */
+  .sys-hero { padding: 80px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; }
+  .hero-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dark);
+    margin-bottom: 20px; font-family: var(--sans);
+  }
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.08;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .hero-h1 em { font-style: italic; color: var(--gold-dark); }
+  .hero-sub {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; max-width: 480px; margin-bottom: 40px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s; font-family: var(--sans);
+  }
+  .btn-primary:hover { opacity: 0.75; }
+  .btn-ghost {
+    background: transparent; border: 1px solid var(--rule);
+    color: var(--ink-mid); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.06em; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--canvas-2); border: 1px solid var(--rule);
+    padding: 28px; min-width: 220px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .hc-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 4px;
+  }
+  .hc-item { display: flex; gap: 10px; font-size: 13px; font-weight: 300; color: var(--ink-mid); }
+  .hc-check { color: var(--gold-dark); font-weight: 600; flex-shrink: 0; font-family: var(--sans); }
+  .hc-divider { border-top: 1px solid var(--rule); margin: 8px 0; }
+  .hc-price {
+    font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--ink); line-height: 1;
+  }
+  .hc-price-sub { font-size: 11px; font-weight: 300; color: var(--ink-light); font-family: var(--sans); }
+
+  /* SECTIONS */
+  .section-label {
+    display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 16px;
+  }
+  .section-h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; line-height: 1.12;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .section-h2 em { font-style: italic; color: var(--gold-dark); }
+  .section-body {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.8; margin-bottom: 20px; max-width: 640px;
+  }
+
+  /* PROBLEM */
+  .problem-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .problem-inner { max-width: 700px; }
+  .sys-quote {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 300; font-style: italic;
+    line-height: 1.65; color: var(--ink-mid);
+    border-left: 2px solid var(--gold); padding-left: 28px;
+    margin-top: 36px;
+  }
+  .sys-quote strong { font-style: normal; color: var(--ink); font-weight: 400; }
+
+  /* ARCHITECTURE */
+  .arch-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .layers-grid {
+    display: grid; grid-template-columns: repeat(1, 1fr);
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+    margin: 40px 0;
+  }
+  .layer-card { background: var(--white); padding: 28px; }
+  .layer-card:hover { background: var(--canvas-2); }
+  .layer-output { background: var(--canvas-2); }
+  .layer-n {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 8px;
+  }
+  .layer-name {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .layer-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  .flow-panel {
+    background: var(--canvas-2); border: 1px solid var(--rule); padding: 32px;
+  }
+  .flow-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-light);
+    font-family: var(--sans); margin-bottom: 28px;
+  }
+  .flow-steps { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border: 1px solid var(--rule); background: var(--white);
+    color: var(--ink-mid); font-size: 13px; font-weight: 300;
+    padding: 12px 24px; text-align: center; width: 100%; max-width: 520px;
+    font-family: var(--sans);
+  }
+  .flow-dashed { border-style: dashed; color: var(--ink-light); background: transparent; }
+  .flow-gold { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 400; }
+  .flow-ink { background: var(--ink); border-color: var(--ink); color: var(--canvas); font-weight: 400; }
+  .flow-arrow { font-size: 18px; color: var(--gold-dark); padding: 6px 0; line-height: 1; }
+
+  /* FOR WHO */
+  .for-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .for-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); margin-top: 40px;
+  }
+  .for-card { background: var(--white); padding: 28px; }
+  .for-role {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 12px;
+  }
+  .for-need { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* PROTOCOL */
+  .protocol-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .protocol-inner { max-width: 680px; }
+  .timeline { margin-top: 40px; border-left: 1px solid var(--rule); padding-left: 32px; }
+  .t-item {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 24px; padding: 0 0 32px;
+  }
+  .t-time {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); padding-top: 3px; line-height: 1.4;
+  }
+  .t-title { font-size: 15px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+  .t-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* NEXT */
+  .next-section { padding: 80px 0; background: var(--canvas-2); border-top: 1px solid var(--rule); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 32px; }
+  .next-card {
+    background: var(--white); padding: 28px;
+    text-decoration: none; color: inherit; transition: background 0.2s;
+  }
+  .next-card:hover { background: var(--canvas-2); }
+  .next-id { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dark); font-family: var(--sans); margin-bottom: 10px; }
+  .next-title { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--ink); margin-bottom: 8px; }
+  .next-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .layers-grid { grid-template-columns: 1fr; }
+    .for-grid { grid-template-columns: repeat(2, 1fr); }
+    .next-grid { grid-template-columns: 1fr; }
+    .t-item { grid-template-columns: 80px 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 24px; }
+    .layers-grid { grid-template-columns: 1fr; }
+    .for-grid { grid-template-columns: 1fr; }
+  }
+</style>

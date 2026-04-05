@@ -1,0 +1,440 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import CTABlock from '../../../components/CTABlock.astro';
+
+const layers = [
+  { n: '01', name: 'Situation Brief',   desc: 'Where you stand today — before anyone else frames it for you.' },
+  { n: '02', name: 'Priority Filter',  desc: 'What actually matters vs. what only feels urgent.' },
+  { n: '03', name: 'Decision Prep',    desc: 'Pre-think today's decisions before pressure arrives.' },
+  { n: '04', name: 'Opportunity Scan', desc: 'The one move that creates the most leverage today.' },
+  { n: '05', name: 'Execution Block',  desc: 'Compile your daily brief. One screen. Act.' },
+];
+
+const for_who = [
+  { role: 'Founders & CEOs',        need: 'Lead, not react. Know your landscape before the first meeting.' },
+  { role: 'Sales Directors',        need: 'Stakeholder intelligence and priority clarity before every call.' },
+  { role: 'HR Directors',           need: 'Strategic framing before board meetings and people decisions.' },
+  { role: 'Consultants',            need: 'Multi-client intelligence management in one morning sweep.' },
+  { role: 'Real Estate Agents',     need: 'Market awareness and priority alignment before every day starts.' },
+  { role: 'Any decision-maker',     need: 'Clarity before noise. Every morning. That's the system.' },
+];
+---
+
+<PageLayout
+  title="The Morning Intelligence System — SeedSystems™ Signature Systems"
+  description="An AI-powered daily intelligence brief for decision-makers. 10 master prompts. 5 intelligence layers. 15 minutes every morning. $29 one-time."
+  activePath="/systems/"
+>
+  <!-- ── HERO ── -->
+  <section class="sys-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">SeedSystems™</a>
+        <span class="sep">→</span>
+        <a href="/systems/">Signature Systems</a>
+        <span class="sep">→</span>
+        <span>Morning Intelligence</span>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-tag">SS-01 · Intelligence Series</span>
+          <h1 class="hero-h1">
+            The Morning<br /><em>Intelligence System</em>
+          </h1>
+          <p class="hero-sub">
+            10 master prompts. 5 intelligence layers. 15 minutes every morning —
+            before the day begins. Personalised to your role, industry, and priorities.
+          </p>
+          <div class="hero-actions">
+            <a href="https://seedsystems.gumroad.com/l/morning-intelligence" class="btn-primary" target="_blank" rel="noopener">
+              Get this system — $29
+            </a>
+            <a href="https://seedsystems.gumroad.com/l/morning-intelligence-free" class="btn-ghost" target="_blank" rel="noopener">
+              Try one prompt free
+            </a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hc-label">What you get</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 10 master prompts</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 5 intelligence layers</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Interactive personalisation</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 15-minute daily protocol</div>
+            <div class="hc-item"><span class="hc-check">✓</span> End-of-day debrief loop</div>
+            <div class="hc-item"><span class="hc-check">✓</span> One-click copy on all prompts</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Works with free Claude AI</div>
+            <div class="hc-divider"></div>
+            <div class="hc-price">$29</div>
+            <div class="hc-price-sub">One-time · Interactive HTML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROBLEM ── -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">The Problem</p>
+        <h2 class="section-h2">
+          Most professionals start<br /><em>every day reactive.</em>
+        </h2>
+        <p class="section-body">
+          Inbox first. Messages second. The calendar owns them before they've had a single
+          independent thought. By the time they've assessed what actually matters, it's mid-morning —
+          and their best cognitive hours are gone, spent on other people's agendas.
+        </p>
+        <p class="section-body">
+          The problem isn't discipline. It's the absence of a system. Armies get briefed.
+          Intelligence agencies get briefed. Executives at the highest level get briefed.
+          Most professionals start the day by scrolling.
+        </p>
+        <blockquote class="sys-quote">
+          "15 minutes of structured intelligence-gathering before the day begins means you enter
+          every meeting, every decision, and every interaction with a complete picture.
+          Not a filtered one. Not a reactive one. <strong>Yours.</strong>"
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── ARCHITECTURE ── -->
+  <section class="arch-section">
+    <div class="container">
+      <p class="section-label">System Architecture</p>
+      <h2 class="section-h2">5 Layers. 10 Prompts. 15 Minutes.</h2>
+      <div class="layers-grid">
+        {layers.map(l => (
+          <div class="layer-card">
+            <div class="layer-n">Layer {l.n}</div>
+            <div class="layer-name">{l.name}</div>
+            <div class="layer-desc">{l.desc}</div>
+          </div>
+        ))}
+        <div class="layer-card layer-output">
+          <div class="layer-n">Output</div>
+          <div class="layer-name">Your Daily Brief</div>
+          <div class="layer-desc">Situation · Priorities · Decisions · Leverage · Watch list.</div>
+        </div>
+      </div>
+      <div class="flow-panel">
+        <div class="flow-label">Information flow — from raw context to daily intelligence brief</div>
+        <div class="flow-steps">
+          <div class="flow-node flow-dashed">Your Context — Role · Priorities · Projects · Pending decisions</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Layer 1 + 2 — Situation Awareness + Priority Filter</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Layer 3 + 4 — Decision Prep + Opportunity Scan</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-gold">AI Synthesis — Pattern recognition + Leverage identification</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-ink">Your Daily Brief — Situation · Stack · Decisions · Leverage · Watch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── WHO IT'S FOR ── -->
+  <section class="for-section">
+    <div class="container">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-h2">Built for anyone who<br /><em>makes decisions under pressure.</em></h2>
+      <div class="for-grid">
+        {for_who.map(f => (
+          <div class="for-card">
+            <div class="for-role">{f.role}</div>
+            <div class="for-need">{f.need}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROTOCOL ── -->
+  <section class="protocol-section">
+    <div class="container">
+      <div class="protocol-inner">
+        <p class="section-label">The Daily Protocol</p>
+        <h2 class="section-h2">15 minutes. Before anyone<br /><em>gets to you.</em></h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-time">Minute 1</div>
+            <div class="t-right">
+              <div class="t-title">Open Claude. Paste your context.</div>
+              <div class="t-desc">Run Prompt 01 — Situation Awareness. Full picture in 90 seconds.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Minutes 3–4</div>
+            <div class="t-right">
+              <div class="t-title">Priority Stack</div>
+              <div class="t-desc">Paste today's task list into Prompt 03. Your #1 priority is protected time.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Minutes 7–9</div>
+            <div class="t-right">
+              <div class="t-title">Decision Prep + Leverage</div>
+              <div class="t-desc">Decision pre-mortem on anything pending. Prompt 07 — your alpha move for today.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Minutes 12–14</div>
+            <div class="t-right">
+              <div class="t-title">Compile your Daily Brief</div>
+              <div class="t-desc">Prompt 09 compiles everything into one structured brief. One screen. Act.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Minute 15</div>
+            <div class="t-right">
+              <div class="t-title">Execute.</div>
+              <div class="t-desc">Close the tool. Full clarity before your first meeting. Ahead of 95% of your industry.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <CTABlock
+    eyebrow="Get started"
+    headline="$29. One file.<br /><em>Every morning.</em>"
+    subtext="Interactive HTML. Works with free Claude AI. Personalised to your role in 90 seconds. Or try one prompt for free — no email, no sign-up."
+    primaryLabel="Get the full system — $29"
+    primaryHref="https://seedsystems.gumroad.com/l/morning-intelligence"
+    ghostLabel="Try one prompt free"
+    ghostHref="https://seedsystems.gumroad.com/l/morning-intelligence-free"
+  />
+
+  <!-- ── NEXT SYSTEM ── -->
+  <section class="next-section">
+    <div class="container">
+      <p class="section-label">Also in the Signature Series</p>
+      <div class="next-grid">
+        <a href="/systems/content-engine/" class="next-card">
+          <div class="next-id">SS-03</div>
+          <div class="next-title">The Content Engine System</div>
+          <div class="next-desc">One insight → 30 days of content across every platform.</div>
+        </a>
+        <a href="/systems/sales-intelligence/" class="next-card">
+          <div class="next-id">SS-05</div>
+          <div class="next-title">The Sales Intelligence System</div>
+          <div class="next-desc">Full-cycle AI sales infrastructure from ICP to close.</div>
+        </a>
+        <a href="/systems/ceo-intelligence/" class="next-card">
+          <div class="next-id">SS-08</div>
+          <div class="next-title">The CEO Intelligence Briefing</div>
+          <div class="next-desc">Executive-grade intelligence across five CEO functions.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .container { max-width: var(--container-sm); margin: 0 auto; padding: 0 48px; }
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+  .gold-rule { width: 48px; height: 2px; background: var(--gold); margin-bottom: 28px; }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; color: var(--ink-light); letter-spacing: 0.04em;
+    margin-bottom: 48px; font-family: var(--sans);
+  }
+  .breadcrumb a { color: var(--ink-light); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .sep { color: var(--rule); }
+
+  /* HERO */
+  .sys-hero { padding: 80px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; }
+  .hero-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dark);
+    margin-bottom: 20px; font-family: var(--sans);
+  }
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.08;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .hero-h1 em { font-style: italic; color: var(--gold-dark); }
+  .hero-sub {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; max-width: 480px; margin-bottom: 40px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s; font-family: var(--sans);
+  }
+  .btn-primary:hover { opacity: 0.75; }
+  .btn-ghost {
+    background: transparent; border: 1px solid var(--rule);
+    color: var(--ink-mid); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.06em; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--canvas-2); border: 1px solid var(--rule);
+    padding: 28px; min-width: 220px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .hc-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 4px;
+  }
+  .hc-item { display: flex; gap: 10px; font-size: 13px; font-weight: 300; color: var(--ink-mid); }
+  .hc-check { color: var(--gold-dark); font-weight: 600; flex-shrink: 0; font-family: var(--sans); }
+  .hc-divider { border-top: 1px solid var(--rule); margin: 8px 0; }
+  .hc-price {
+    font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--ink); line-height: 1;
+  }
+  .hc-price-sub { font-size: 11px; font-weight: 300; color: var(--ink-light); font-family: var(--sans); }
+
+  /* SECTIONS */
+  .section-label {
+    display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 16px;
+  }
+  .section-h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; line-height: 1.12;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .section-h2 em { font-style: italic; color: var(--gold-dark); }
+  .section-body {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.8; margin-bottom: 20px; max-width: 640px;
+  }
+
+  /* PROBLEM */
+  .problem-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .problem-inner { max-width: 700px; }
+  .sys-quote {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 300; font-style: italic;
+    line-height: 1.65; color: var(--ink-mid);
+    border-left: 2px solid var(--gold); padding-left: 28px;
+    margin-top: 36px;
+  }
+  .sys-quote strong { font-style: normal; color: var(--ink); font-weight: 400; }
+
+  /* ARCHITECTURE */
+  .arch-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .layers-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+    margin: 40px 0;
+  }
+  .layer-card { background: var(--white); padding: 28px; }
+  .layer-card:hover { background: var(--canvas-2); }
+  .layer-output { background: var(--canvas-2); }
+  .layer-n {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 8px;
+  }
+  .layer-name {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .layer-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  .flow-panel {
+    background: var(--canvas-2); border: 1px solid var(--rule); padding: 32px;
+  }
+  .flow-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-light);
+    font-family: var(--sans); margin-bottom: 28px;
+  }
+  .flow-steps { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border: 1px solid var(--rule); background: var(--white);
+    color: var(--ink-mid); font-size: 13px; font-weight: 300;
+    padding: 12px 24px; text-align: center; width: 100%; max-width: 520px;
+    font-family: var(--sans);
+  }
+  .flow-dashed { border-style: dashed; color: var(--ink-light); background: transparent; }
+  .flow-gold { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 400; }
+  .flow-ink { background: var(--ink); border-color: var(--ink); color: var(--canvas); font-weight: 400; }
+  .flow-arrow { font-size: 18px; color: var(--gold-dark); padding: 6px 0; line-height: 1; }
+
+  /* FOR WHO */
+  .for-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .for-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); margin-top: 40px;
+  }
+  .for-card { background: var(--white); padding: 28px; }
+  .for-role {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 12px;
+  }
+  .for-need { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* PROTOCOL */
+  .protocol-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .protocol-inner { max-width: 680px; }
+  .timeline { margin-top: 40px; border-left: 1px solid var(--rule); padding-left: 32px; }
+  .t-item {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 24px; padding: 0 0 32px;
+  }
+  .t-time {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); padding-top: 3px; line-height: 1.4;
+  }
+  .t-title { font-size: 15px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+  .t-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* NEXT */
+  .next-section { padding: 80px 0; background: var(--canvas-2); border-top: 1px solid var(--rule); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 32px; }
+  .next-card {
+    background: var(--white); padding: 28px;
+    text-decoration: none; color: inherit; transition: background 0.2s;
+  }
+  .next-card:hover { background: var(--canvas-2); }
+  .next-id { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dark); font-family: var(--sans); margin-bottom: 10px; }
+  .next-title { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--ink); margin-bottom: 8px; }
+  .next-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .layers-grid { grid-template-columns: repeat(2, 1fr); }
+    .for-grid { grid-template-columns: repeat(2, 1fr); }
+    .next-grid { grid-template-columns: 1fr; }
+    .t-item { grid-template-columns: 80px 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 24px; }
+    .layers-grid { grid-template-columns: 1fr; }
+    .for-grid { grid-template-columns: 1fr; }
+  }
+</style>

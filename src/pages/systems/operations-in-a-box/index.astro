@@ -1,0 +1,424 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import CTABlock from '../../../components/CTABlock.astro';
+
+const layers = [
+  { n: '01', name: 'Infrastructure', desc: 'Proposals, contracts, onboarding, invoicing. The systems that make clients trust you from day one.' },
+  { n: '02', name: 'Execution', desc: 'Client comms, project management, delivery tracking. What\'s happening with current clients and projects.' },
+  { n: '03', name: 'Intelligence', desc: 'Weekly reviews, pipeline reporting, forecasting. The state of the business this week.' },
+];
+
+const for_who = [
+  { role: 'Freelancers', need: 'Any service discipline: design, writing, consulting, development, marketing.' },
+  { role: 'Solo Consultants', need: 'Managing 2–10 active client relationships simultaneously.' },
+  { role: 'Independent Contractors', need: 'Who want to look and operate like a proper firm.' },
+  { role: 'New Freelancers', need: 'Who want to set up professionally from day one.' },
+  { role: 'Side-Hustle Operators', need: 'Transitioning to full-time independence.' },
+  { role: 'Any Independent Professional', need: 'Who loses 30–40% of earning potential to operational chaos.' },
+];
+---
+
+<PageLayout
+  title="Operations in a Box — SeedSystems™ Signature Systems"
+  description="Complete AI-powered operational stack for freelancers and solo consultants. 3 layers. Run your solo business like a firm. $29 one-time."
+  activePath="/systems/"
+>
+  <!-- ── HERO ── -->
+  <section class="sys-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">SeedSystems™</a>
+        <span class="sep">→</span>
+        <a href="/systems/">Signature Systems</a>
+        <span class="sep">→</span>
+        <span>Operations in a Box</span>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-tag">SS-02 · Operations Series</span>
+          <h1 class="hero-h1">
+            Operations<br /><em>in a Box</em>
+          </h1>
+          <p class="hero-sub">
+            Run your solo business like a firm. Complete AI-powered operational stack
+            for freelancers and solo consultants. Infrastructure. Execution. Intelligence.
+          </p>
+          <div class="hero-actions">
+            <a href="https://seedsystems.gumroad.com/l/operations-in-a-box" class="btn-primary" target="_blank" rel="noopener">
+              Get this system — $29
+            </a>
+            <a href="https://seedsystems.gumroad.com/l/operations-free" class="btn-ghost" target="_blank" rel="noopener">
+              Try one prompt free
+            </a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hc-label">What you get</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 3 operational layers</div>
+            <div class="hc-item"><span class="hc-check">✓</span> 15+ master prompts</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Weekly protocol</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Client management system</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Project tracking frameworks</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Invoice & pipeline templates</div>
+            <div class="hc-item"><span class="hc-check">✓</span> Works with free Claude AI</div>
+            <div class="hc-divider"></div>
+            <div class="hc-price">$29</div>
+            <div class="hc-price-sub">One-time · Interactive HTML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROBLEM ── -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="gold-rule"></div>
+        <p class="section-label">The Problem</p>
+        <h2 class="section-h2">
+          Most freelancers are<br /><em>talented. Very few run</em><br />a tight operation.
+        </h2>
+        <p class="section-body">
+          You chase client work because the business operations are chaos. Proposals scattered across emails.
+          Contracts are informal. Invoicing is haphazard. You're losing 30–40% of your earning potential
+          just to operational friction.
+        </p>
+        <p class="section-body">
+          You don't need more discipline. You need a system. The infrastructure that turns chaos into
+          a proper operation. The framework that makes clients trust you from day one.
+        </p>
+        <blockquote class="sys-quote">
+          "Most freelancers are talented. Very few run a tight operation.
+          <strong>This system closes that gap.</strong>"
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── ARCHITECTURE ── -->
+  <section class="arch-section">
+    <div class="container">
+      <p class="section-label">System Architecture</p>
+      <h2 class="section-h2">3 Layers. Complete Operations.</h2>
+      <div class="layers-grid">
+        {layers.map(l => (
+          <div class="layer-card">
+            <div class="layer-n">Layer {l.n}</div>
+            <div class="layer-name">{l.name}</div>
+            <div class="layer-desc">{l.desc}</div>
+          </div>
+        ))}
+      </div>
+      <div class="flow-panel">
+        <div class="flow-label">Operational layers — from first client to scaling the business</div>
+        <div class="flow-steps">
+          <div class="flow-node flow-dashed">New client inquiry arrives</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Layer 1 — Infrastructure (Proposal · Contract · Onboarding)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node">Layer 2 — Execution (Project management · Delivery tracking)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-gold">AI Synthesis — Weekly reviews, pipeline health, forecasting</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-node flow-ink">Layer 3 — Intelligence (Business reporting · Growth strategy)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── WHO IT'S FOR ── -->
+  <section class="for-section">
+    <div class="container">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-h2">Built for anyone who runs<br /><em>a solo business.</em></h2>
+      <div class="for-grid">
+        {for_who.map(f => (
+          <div class="for-card">
+            <div class="for-role">{f.role}</div>
+            <div class="for-need">{f.need}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ── PROTOCOL ── -->
+  <section class="protocol-section">
+    <div class="container">
+      <div class="protocol-inner">
+        <p class="section-label">The Daily Rhythm</p>
+        <h2 class="section-h2">15 minutes per day.<br /><em>One rhythm all week.</em></h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-time">Monday (15 min)</div>
+            <div class="t-right">
+              <div class="t-title">Weekly Review</div>
+              <div class="t-desc">Check active projects, flag risks, set the week's priorities.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Tue–Thu (5–10 min)</div>
+            <div class="t-right">
+              <div class="t-title">Execution Prompts as Needed</div>
+              <div class="t-desc">Client updates, delivery confirmations, scope management.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">Friday (10 min)</div>
+            <div class="t-right">
+              <div class="t-title">Week Close</div>
+              <div class="t-desc">Invoice check, log completed milestones, pipeline update.</div>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-time">As Needed</div>
+            <div class="t-right">
+              <div class="t-title">Infrastructure Prompts</div>
+              <div class="t-desc">Proposals, onboarding, contracts when new clients arrive.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <CTABlock
+    eyebrow="Get started"
+    headline="$29. Run your business<br /><em>like a firm.</em>"
+    subtext="Interactive HTML. Complete operational stack. Prompts for proposals, contracts, invoicing, project tracking, and weekly reviews. Or try one prompt for free."
+    primaryLabel="Get the full system — $29"
+    primaryHref="https://seedsystems.gumroad.com/l/operations-in-a-box"
+    ghostLabel="Try one prompt free"
+    ghostHref="https://seedsystems.gumroad.com/l/operations-free"
+  />
+
+  <!-- ── NEXT SYSTEM ── -->
+  <section class="next-section">
+    <div class="container">
+      <p class="section-label">Also in the Signature Series</p>
+      <div class="next-grid">
+        <a href="/systems/morning-intelligence/" class="next-card">
+          <div class="next-id">SS-01</div>
+          <div class="next-title">The Morning Intelligence System</div>
+          <div class="next-desc">10 master prompts. 5 intelligence layers. 15 minutes every morning.</div>
+        </a>
+        <a href="/systems/freelancer-command-center/" class="next-card">
+          <div class="next-id">SS-09</div>
+          <div class="next-title">Freelancer Command Center</div>
+          <div class="next-desc">Stop running your business from your inbox.</div>
+        </a>
+        <a href="/systems/sales-intelligence/" class="next-card">
+          <div class="next-id">SS-05</div>
+          <div class="next-title">The Sales Intelligence System</div>
+          <div class="next-desc">Full-cycle AI sales infrastructure from ICP to close.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .container { max-width: var(--container-sm); margin: 0 auto; padding: 0 48px; }
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+  .gold-rule { width: 48px; height: 2px; background: var(--gold); margin-bottom: 28px; }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; color: var(--ink-light); letter-spacing: 0.04em;
+    margin-bottom: 48px; font-family: var(--sans);
+  }
+  .breadcrumb a { color: var(--ink-light); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .sep { color: var(--rule); }
+
+  /* HERO */
+  .sys-hero { padding: 80px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; }
+  .hero-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dark);
+    margin-bottom: 20px; font-family: var(--sans);
+  }
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.08;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .hero-h1 em { font-style: italic; color: var(--gold-dark); }
+  .hero-sub {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.75; max-width: 480px; margin-bottom: 40px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--ink); color: var(--canvas);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s; font-family: var(--sans);
+  }
+  .btn-primary:hover { opacity: 0.75; }
+  .btn-ghost {
+    background: transparent; border: 1px solid var(--rule);
+    color: var(--ink-mid); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.06em; padding: 14px 28px;
+    text-decoration: none; display: inline-block;
+    transition: border-color 0.2s, color 0.2s; font-family: var(--sans);
+  }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--canvas-2); border: 1px solid var(--rule);
+    padding: 28px; min-width: 220px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .hc-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 4px;
+  }
+  .hc-item { display: flex; gap: 10px; font-size: 13px; font-weight: 300; color: var(--ink-mid); }
+  .hc-check { color: var(--gold-dark); font-weight: 600; flex-shrink: 0; font-family: var(--sans); }
+  .hc-divider { border-top: 1px solid var(--rule); margin: 8px 0; }
+  .hc-price {
+    font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--ink); line-height: 1;
+  }
+  .hc-price-sub { font-size: 11px; font-weight: 300; color: var(--ink-light); font-family: var(--sans); }
+
+  /* SECTIONS */
+  .section-label {
+    display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 16px;
+  }
+  .section-h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; line-height: 1.12;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .section-h2 em { font-style: italic; color: var(--gold-dark); }
+  .section-body {
+    font-size: 16px; font-weight: 300; color: var(--ink-mid);
+    line-height: 1.8; margin-bottom: 20px; max-width: 640px;
+  }
+
+  /* PROBLEM */
+  .problem-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .problem-inner { max-width: 700px; }
+  .sys-quote {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 300; font-style: italic;
+    line-height: 1.65; color: var(--ink-mid);
+    border-left: 2px solid var(--gold); padding-left: 28px;
+    margin-top: 36px;
+  }
+  .sys-quote strong { font-style: normal; color: var(--ink); font-weight: 400; }
+
+  /* ARCHITECTURE */
+  .arch-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .layers-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+    margin: 40px 0;
+  }
+  .layer-card { background: var(--white); padding: 28px; }
+  .layer-card:hover { background: var(--canvas-2); }
+  .layer-output { background: var(--canvas-2); }
+  .layer-n {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); margin-bottom: 8px;
+  }
+  .layer-name {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .layer-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  .flow-panel {
+    background: var(--canvas-2); border: 1px solid var(--rule); padding: 32px;
+  }
+  .flow-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-light);
+    font-family: var(--sans); margin-bottom: 28px;
+  }
+  .flow-steps { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border: 1px solid var(--rule); background: var(--white);
+    color: var(--ink-mid); font-size: 13px; font-weight: 300;
+    padding: 12px 24px; text-align: center; width: 100%; max-width: 520px;
+    font-family: var(--sans);
+  }
+  .flow-dashed { border-style: dashed; color: var(--ink-light); background: transparent; }
+  .flow-gold { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 400; }
+  .flow-ink { background: var(--ink); border-color: var(--ink); color: var(--canvas); font-weight: 400; }
+  .flow-arrow { font-size: 18px; color: var(--gold-dark); padding: 6px 0; line-height: 1; }
+
+  /* FOR WHO */
+  .for-section { padding: 100px 0; background: var(--canvas-2); border-bottom: 1px solid var(--rule); }
+  .for-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); margin-top: 40px;
+  }
+  .for-card { background: var(--white); padding: 28px; }
+  .for-role {
+    font-family: var(--serif); font-size: 18px; font-weight: 300;
+    color: var(--ink); margin-bottom: 12px;
+  }
+  .for-need { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* PROTOCOL */
+  .protocol-section { padding: 100px 0; background: var(--canvas); border-bottom: 1px solid var(--rule); }
+  .protocol-inner { max-width: 680px; }
+  .timeline { margin-top: 40px; border-left: 1px solid var(--rule); padding-left: 32px; }
+  .t-item {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 24px; padding: 0 0 32px;
+  }
+  .t-time {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gold-dark);
+    font-family: var(--sans); padding-top: 3px; line-height: 1.4;
+  }
+  .t-title { font-size: 15px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+  .t-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; }
+
+  /* NEXT */
+  .next-section { padding: 80px 0; background: var(--canvas-2); border-top: 1px solid var(--rule); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 32px; }
+  .next-card {
+    background: var(--white); padding: 28px;
+    text-decoration: none; color: inherit; transition: background 0.2s;
+  }
+  .next-card:hover { background: var(--canvas-2); }
+  .next-id { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dark); font-family: var(--sans); margin-bottom: 10px; }
+  .next-title { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--ink); margin-bottom: 8px; }
+  .next-desc { font-size: 13px; font-weight: 300; color: var(--ink-mid); line-height: 1.55; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .layers-grid { grid-template-columns: repeat(2, 1fr); }
+    .for-grid { grid-template-columns: repeat(2, 1fr); }
+    .next-grid { grid-template-columns: 1fr; }
+    .t-item { grid-template-columns: 80px 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 24px; }
+    .layers-grid { grid-template-columns: 1fr; }
+    .for-grid { grid-template-columns: 1fr; }
+  }
+</style>
